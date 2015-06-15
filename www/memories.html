@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Kazoku</title>
+
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+
+	<main class="memories">
+		<div class="overlay">
+
+			<header class="clearfix">
+				<a class="btn-prev left" href="#"> <img src="img/prev.png"/></a>
+				<p class="btn-close right"> <a href="tutoriel.html">Fermer</a> </p>
+			</header>
+
+			<form class="" role="form">
+
+				<section class="page">
+					<h1 class="">Etape 1</h1>
+					<p>Illustrer<br>votre souvenir</p>
+					<div id="hide-for-picture">
+						<div class="inline-flex first-choice">
+							<span id="photo" class="btn btn-icon"><img src="img/icons/photo.svg"></span>
+							<span id="video" class="btn btn-icon"><img src="img/icons/camera.svg"></span>
+						</div>
+						<div class="second-choice">
+							<p class="btn-icon-snd" id="illustration"><span><img src="img/icons/photo2.svg"></span>Appareil photo</p>
+							<p id="gallerie" class="btn-icon-snd" ><span><img src="img/icons/gallerie.svg"></span>Gallerie</p>
+							<p id="web" class="btn-icon-snd"><span><img src="img/icons/web.svg"></span>Web</p>
+						</div>
+					</div>
+					<div id="picture-preview"></div>
+					<div id="edit" class="btn btn-diamond"><img src="img/icons/modifier.svg"></div>
+					<a href="#" id="upload-image" class="btn btn-next hide">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 2</h1>
+					<p>Narrer<br>votre souvenir</p>
+					<div class="inline-flex first-choice">
+						<span id="enregistrement" class="btn btn-icon"><img src="img/icons/enregistrement.svg"></span>
+						<span id="text" class="btn btn-icon"><img src="img/icons/texte.svg"></span>
+					</div>
+					<div class="second-choice">
+						<textarea class="form-control" id="narration" name="narration" placeholder="Raconter votre souvenirs"></textarea>
+					</div>
+					<a href="#" class="btn btn-next">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 3</h1>
+					<p>Ajouter un fond sonore<br>à votre souvenir</p>
+					<div class="inline-flex first-choice">
+						<span id="musique" class="btn btn-icon"><img src="img/icons/musique.svg"></span>
+						<span id="son" class="btn btn-icon"><img src="img/icons/son.svg"></span>
+					</div>
+					<div class="second-choice">
+						<input class="btn input-file" id="musique" type="file">
+						<label for="musique" class="btn-icon-snd"><img src="img/icons/album.svg">Album</label>
+						<input class="btn input-file" id="son" type="file">
+						<label for="musique" class="btn-icon-snd"><img src="img/icons/web.svg">Web</label>
+					</div>
+					<p class="file-return"></p>
+					<a href="#" class="btn btn-next">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 4</h1>
+					<p>Ajouter une date<br>à votre souvenir</p>
+					<label class="italic dark-color">Quelle année?</label>
+					<input type="text" id="date"></input>
+					<p class="color-bright"> ET / OU</p> 
+					<label class="italic dark-color">Quel âge<br>aviez vous?</label>
+					<input type="text" id="age"></input>
+					<a href="#" id="btn-next-sphere" class="btn btn-next">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 5</h1>
+					<p>Ajouter une sphère de vie<br>à votre souvenir</p>
+					<div class="clearfix btn-sphere-container">
+						<span class="btn-sphere" id="familial"><img src="img/icons/maison.svg"></br>Famille</span>
+						<span class="btn-sphere" id="professionnel"><img src="img/icons/travail.svg"></br>Travail</span>
+						<span class="btn-sphere" id="historique"><img src="img/icons/histoire.svg"></br>Histoire</span>
+						<span class="btn-sphere" id="amour"><img src="img/icons/amour.svg"></br>Amour</span>
+						<span class="btn-sphere" id="amical"><img src="img/icons/amis.svg"></br>Amitié</span>
+						
+					</div>
+					<a href="#" id="btn-next-emotion" class="btn btn-next">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 6</h1>
+					<p>Ajouter une émotion<br>à votre souvenir</p>
+					<div class="clearfix btn-emotion-container">
+						<span class="btn-emotion emotion" id="joie"></span>
+						<span class="btn-emotion emotion" id="colere"></span>
+						<span class="btn-emotion emotion" id="triste"></span>
+						<span class="btn-emotion emotion" id="surprise"></span>
+						<span class="btn-emotion emotion" id="doute"></span>
+					</div>
+					<a href="#" class="btn btn-next">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 7</h1>
+					<p>Ajouter un moyen<br>de partage</p>
+					<span class="btn btn-share" id="distance"></span>
+					<img class="half" src="img/distance.png"/>
+					<p class="no-margin uppercase dark-color">à distance</p> 
+					<span class="btn btn-share" id="ensemble"></span>
+					<img class="half" src="img/ensemble.png"/>
+					<p class="no-margin uppercase dark-color">ensemble</p> 
+					<a href="#"  id="add" class="btn btn-next">Suivant</a>
+				</section>
+
+				<section class="page">
+					<h1>Etape 8</h1>
+					<p>Valider<br>votre souvenir</p>
+
+					<div class="preview-container" id="list-memories">
+						<div  class="illustration preview"><img id="picture-end-preview"src=""/></div>
+					</div>
+					<a href="#" id="validate" class="btn">Valider</a>
+					
+				</section>
+			</form>
+
+
+			<footer>
+				<div class="progress-bar">
+					<span class="bar"></span>
+				</div>
+			</footer>
+
+			<script type="text/template" id="list-item-tmpl">
+
+				<p class="narration preview"><%= narration %></p>
+				<p class="date preview"><%= date %></p>
+				<p class="sphere preview" ><%= sphere %></p>
+				<p class="emotion preview"><%= emotion %></p>
+				<p class="music preview"><%= musique %></p>
+			</script>
+
+
+			
+
+		</div>
+	</main>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="cordova_plugin.js"></script>
+	<script type="text/javascript" src="js/vendor/underscore-min.js"></script>
+	<script type="text/javascript" src="js/vendor/backbone-min.js"></script>
+	<script type="text/javascript" src="js/vendor/plugin.js"></script>
+	<script type="text/javascript" src="js/transition.js"></script>
+	<script type="text/javascript" src="js/memories.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/animation.js"></script>
+
+
+
+
+</body>
+</html>
