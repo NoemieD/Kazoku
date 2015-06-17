@@ -60,18 +60,19 @@
 
 				<section class="page">
 					<h1>Etape 3</h1>
-					<p>Ajouter un fond sonore<br>à votre souvenir</p>
+					<p>Ajouter un fond sonore<br>à votre souvenir<br><span class="dark-color bold-font no-margin">-Falcultatif-</span></p>
 					<div class="inline-flex first-choice">
-						<span id="musique" class="btn btn-icon"><img src="img/icons/musique.svg"></span>
+						<span id="" class="btn btn-icon"><img src="img/icons/musique.svg"></span>
 						<span id="son" class="btn btn-icon"><img src="img/icons/son.svg"></span>
 					</div>
 					<div class="second-choice">
-						<input class="btn input-file" id="musique" type="file">
-						<label for="musique" class="btn-icon-snd"><img src="img/icons/album.svg">Album</label>
+						<!--<input id="input-file" class="btn input-file" type="file">
+						<label for="musique" id="musique" class="btn-icon-snd"><img src="img/icons/album.svg">Album</label>
 						<input class="btn input-file" id="son" type="file">
-						<label for="musique" class="btn-icon-snd"><img src="img/icons/web.svg">Web</label>
+						<label for="musique" class="btn-icon-snd"><img src="img/icons/web.svg">Web</label>-->
+						<p class="btn-icon-snd" id="musique"><span><img src="img/icons/album.svg"></span>Album</p>
 					</div>
-					<p class="file-return"></p>
+					<p id="file-return" class="file-return"></p>
 					<a href="#" class="btn btn-next">Suivant</a>
 				</section>
 
@@ -130,7 +131,7 @@
 					<p>Valider<br>votre souvenir</p>
 
 					<div class="preview-container" id="list-memories">
-						<div  class="illustration preview"><img id="picture-end-preview"src=""/></div>
+						<div id="preview-picture" class="illustration preview"><img id="picture-end-preview"src=""/></div>
 					</div>
 					<a href="#" id="validate" class="btn">Valider</a>
 					
@@ -146,11 +147,11 @@
 
 			<script type="text/template" id="list-item-tmpl">
 
-				<p class="narration preview"><%= narration %></p>
-				<p class="date preview"><%= date %></p>
-				<p class="sphere preview" ><%= sphere %></p>
-				<p class="emotion preview"><%= emotion %></p>
-				<p class="music preview"><%= musique %></p>
+				<p id="preview-narration" class="narration preview"><%= narration %></p>
+				<p id="preview-date" class="date preview"><%= date %></p>
+				<p id="preview-sphere" class="sphere preview" ><%= sphere %></p>
+				<p id="preview-emotion" class="emotion preview"><%= emotion %></p>
+				<p id="preview-music" class="music preview"><%= musique %></p>
 			</script>
 
 

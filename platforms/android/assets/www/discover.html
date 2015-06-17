@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+  -->
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Kazoku</title>
+  </head>
+  <body>
+    <main class="clearfix app discover front">
+      <div class="overlay" ></div>
+
+      <div class="full-img" id="img-discover"></div>
+
+      <section class="container-blur ">
+        <div class="blur"></div>
+        <div class="txt-blur text">
+          <img class="half" src="img/objet.png">
+          <p class="uppercase bold-font">Approchez</p>
+          <p>votre objet</p>
+        </div>
+      </section>
+
+      <section class="content-text gesture">
+        <div class="text">
+          <img class="half" src="img/gesture.png">
+          <p class="uppercase bold-font">Entrer</p>
+          <p>à l'interieur de souvenir</p>
+        </div>
+      </section>
+
+      <div id="zoom" class="relative">
+        <section id="text-souvenir" class="content-text text-souvenir">
+          <p class="uppercase date bold-font"> 1987 </p>
+          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget porttitor enim. Praesent dapibus ipsum nec felis ornare fermentum. Morbi nec ante varius, maximus orci vitae, scelerisque est. Sed ut est tortor. Suspendisse vitae massa nec diam tincidunt elementum. Aliquam rutrum dolor dictum felis maximus consequat. Maecenas consequat, justo nec auctor volutpat, lectus lectus facilisis neque, quis cursus sem ipsum eleifend purus.</p>
+        </section>
+
+        <section id="audio">
+          <audio id="music">
+            <source id="music" src="music/sugar_sugar.mp3" />
+          </audio>
+          <div id="audioplayer">
+            <a id="pButton" class="play half"><img src="img/icons/son.svg"></a>
+          </div>
+        </section>
+
+
+        <section id="fin-souvenir" class="fin-souvenir">
+          <p class="dark-color">Votre maman a été<br> prévenu de votre<br>
+            <span class="uppercase dark-color bold-font">découverte</span>
+          </p>
+          <img class="half" src="img/objet-plein.png">
+          <p class="dark-color">Parlez-en vite <br> avec elle</p>
+          <span class="btn btn-diamond"><img class="half" src="img/icons/sms.png"></span>
+          <span class="btn btn-diamond"><img class="half" src="img/icons/call.png"></span>
+
+        </section>
+
+      </div>
+
+      
+
+
+    </main>  
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugin.js"></script>
+    <!--<script type="text/javascript" src="js/index.js"></script>-->
+    <script type="text/javascript" src="js/vendor/underscore-min.js"></script> 
+    <script type="text/javascript" src="js/vendor/modernizr.min.js"></script> 
+    <script type="text/javascript" src="js/vendor/backbone-min.js"></script>
+    <script type="text/javascript" src="js/transition.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/memories.js"></script>
+  </body>
+  </html>

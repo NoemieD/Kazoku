@@ -50,15 +50,59 @@
         alert('Failed because: ' + message);
     },
 
+    onSuccessMusic : function(imageURI){
+        alert("sucess");
+    },
+
     onTakePhoto: function(){
         navigator.camera.getPicture(this.onSuccess.bind(this), this.onFail, { 
             quality: 50,
-            targetWidth: 540,
-            targetHeight: 840,
             destinationType: Camera.DestinationType.FILE_URI
         });
-
     },
+
+    onTakeMusic: function(){
+        console.log("onTakeMusic");
+        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, this.gotFS.bind(this), this.fail)
+    },
+
+    gotFS: function(fileSystem) {
+        console.log(fileSystem);
+        console.log("gotFS");
+        fileSystem.root.getFile("", null, this.gotFileEntry, this.fail);
+    },
+
+    gotFileEntry: function (fileEntry) {
+        console.log("fileEntry");
+        fileEntry.file(this.gotFile.bind(this), this.fail.bind(this));
+    },
+
+    gotFile: function (file){
+        console.log("gotFile");
+        readDataUrl(file);
+        readAsText(file);
+    },
+
+    readDataUrl: function(file){
+        console.log("readAsDataURL");
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("Read as data URL");
+            console.log(evt.target.result);
+        };
+        reader.readAsDataURL(file);
+    },
+
+    readAsText: function(file){
+        console.log("readAsText");
+        var reader = new FileReader();
+        reader.onloadend = function(evt) {
+            console.log("Read as text");
+            console.log(evt.target.result);
+        };
+        reader.readAsText(file);
+    },
+
 
     uploadPhoto: function(imageURI) {
         var cpt = 1;
@@ -71,17 +115,21 @@
        cpt=cpt+1;
 
 
-        var ft = new FileTransfer();
-        ft.upload(imageURI, "http://noemiediaz.fr/kazoku/upload.php",
-            function(){
-                alert("win");
-            }, 
-            function(){
+       var ft = new FileTransfer();
+       ft.upload(imageURI, "http://noemiediaz.fr/kazoku/upload.php",
+        function(){
+            alert("win");
+        }, 
+        function(){
 
-                alert("fail");
-            }, options);
+            alert("fail");
+        }, options);
 
-    },
+   },
+
+   fail:function(){
+    alert("fail");
+   },
 
 
 
@@ -91,8 +139,17 @@
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
-        document.getElementById("illustration").addEventListener("click", this.onTakePhoto.bind(this), false);
-        document.getElementById("edit").addEventListener("click", this.onTakePhoto.bind(this), false);
+        var illustration =  document.getElementById("illustration");
+        var edit =  document.getElementById("edit");
+        var musique =document.getElementById("musique");
+        //document.getElementById("illustration").addEventListener("click", this.onTakePhoto.bind(this), false);
+        //document.getElementById("edit").addEventListener("click", this.onTakePhoto.bind(this), false);
+        if(illustration)
+            illustration.addEventListener("click", this.onTakePhoto.bind(this), false);
+        if(edit)
+            edit.addEventListener("click", this.onTakePhoto.bind(this), false);
+        if(musique)
+            musique.addEventListener("click", this.onTakeMusic.bind(this), false);
 
     },
     // deviceready Event Handler

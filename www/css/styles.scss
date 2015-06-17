@@ -31,7 +31,6 @@
 	font-family: 'Cambria-Italic';
 	src: url('./fonts/Cambria-Italic.eot');
 	src: url('./fonts/Cambria-Italic.eot') format('embedded-opentype'),
-	url('./fonts/Cambria-Italic.woff2') format('woff2'),
 	url('./fonts/Cambria-Italic.woff') format('woff'),
 	url('./fonts/Cambria-Italic.ttf') format('truetype'),
 	url('./fonts/Cambria-Italic.svg#code_lightregular') format('svg');
@@ -192,14 +191,15 @@ button{
 }
 
 .no-margin{
-	margin-bottom:0;
+	margin:0 auto;
 }
 
 textarea {
 	overflow: auto;
 	border: none;
 	width: 100%;
-	height: 200px;
+	height: 190px;
+	margin-bottom:10px;
 	background-color: $color-light-opacity;
 	color: #000;
 	padding: 10px;
@@ -248,6 +248,7 @@ main{
 	height:100%;
 	position:relative;
 }
+main.param,
 main.memories,
 main.tutoriel{
 	background: url("../img/back_old.jpg") no-repeat 0 0 transparent;
@@ -267,23 +268,25 @@ main.discover{
 }
 
 .progress-bar{
-	background-color: #f5ebcf;
+	background-color: $color-light;
 	height: 6px;
 	width: 80%;
 	margin: auto;
 	border-radius: 6px;
 	position: relative;
 	overflow: hidden;
+	margin-top: 60px;
+	.bar{
+		background-color: $color-dark;
+		height: 6px;
+		width: 12.5%;
+		border-radius: 6px;
+		position: absolute;
+		transition:width 0.5s ease;
+	}
 }
 
-.progress-bar .bar{
-	background-color: $color-dark;
-	height: 6px;
-	width: 12.5%;
-	border-radius: 6px;
-	position: absolute;
-	transition:width 0.5s ease;
-}
+
 
 .btn{
 	background-color:$color-light;
@@ -303,7 +306,14 @@ main.discover{
 	box-shadow: 0px 5px 0px 0px $color-light-opacity;
 }
 
-.btn-next.active {
+.param .btn{
+	font-size:16px;
+	margin:30px auto;
+	width:215px;
+}
+
+.btn-next:active
+{
 	background-color: $color-bright;
 	box-shadow: none;
 	margin-top: 25px;
@@ -312,7 +322,7 @@ main.discover{
 
 .page {
 	position: absolute;
-	top:0;
+	top:40px;
 	right: 0;
 	bottom: 0;
 	left: 0;
@@ -330,20 +340,24 @@ main.discover{
 }
 
 /*HEADER */
+
 header{
-	padding:15px;
-	height:21px;
-}
+	position: fixed;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	z-index:500;
+	img{
+		width: 5%;
+	}
+	p{
+		margin-top: 0;
+	}
+	.btn-prev img{
+		width:50%;
+	}
 
-.btn-prev img{
-	width:50%;
 }
-
-.logo{
-	width: 50px;
-	margin: 15px 0;
-}
-
 
 /* TUTORIEL PAGE */
 .tutoriel{
@@ -580,7 +594,7 @@ label.btn-icon-snd{
 	background-size:50%;
 }
 .btn-emotion#joie.active{
-		background:url('../img/icons/joie_hover.svg') $color-joie no-repeat center;
+	background:url('../img/icons/joie_hover.svg') $color-joie no-repeat center;
 	background-size:50%;
 }
 
@@ -594,43 +608,43 @@ label.btn-icon-snd{
 
 .btn-emotion#colere.active{
 	background:url('../img/icons/colere_hover.svg') $color-colere no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .btn-emotion#triste{
 	top: 24%;
 	left: 65%;
 	background:url('../img/icons/tristesse.svg') $color-light no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .btn-emotion#triste.active{
 	background:url('../img/icons/tristesse_hover.svg') $color-triste no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .btn-emotion#surprise{
 	top: 44%;
 	left: 20%;
 	background:url('../img/icons/surprise.svg') $color-light no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .btn-emotion#surprise.active{
 	background:url('../img/icons/surprise_hover.svg') $color-surprise no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .btn-emotion#doute{
 	top: 20%;
 	left: 13%;
 	background:url('../img/icons/doute.svg') $color-light no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .btn-emotion#doute.active{
 	background:url('../img/icons/doute_hover.svg') $color-doute no-repeat center;
-background-size:50%;
+	background-size:50%;
 }
 
 .first-choice{
@@ -754,13 +768,15 @@ uniquement lorsque le paragraphe n'est pas vide */
 	background-color:$color-light;
 	position:absolute;
 	box-sizing: border-box;
+	top:-350px;
+	transition:top 1s ease;
 }
 
 
 .preview.illustration{
 	height: 133px;
 	width: 133px;
-	top: 66px;
+	//top: 66px;
 	left: 55px;
 	z-index: 6;
 
@@ -769,7 +785,7 @@ uniquement lorsque le paragraphe n'est pas vide */
 .preview.narration{
 	height: 116px;
 	width: 116px;
-	top: 166px;
+	//top: 166px;
 	left: 135px;
 	padding: 6px 0;
 	text-align: left;
@@ -780,14 +796,14 @@ uniquement lorsque le paragraphe n'est pas vide */
 	height: 120px;
 	width: 120px;
 	line-height: 114px;
-	top: 100px;
+	//top: 100px;
 	left: 201px;
 }
 
 .preview.date{
 	height: 87px;
 	width: 87px;
-	top: 170px;
+	//top: 170px;
 	left: 43px;
 	line-height: 87px;
 	font-family: $font-bold;
@@ -798,10 +814,11 @@ uniquement lorsque le paragraphe n'est pas vide */
 	width:100px;
 	background:url('../img/icons/amour.svg') center 13px no-repeat $color-light;
 	background-size:50%;
-	top: 0px;
+	//top: 0px;
 	left: 127px;
 	z-index: 5;
-	line-height: 130px;
+	line-height: 140px;
+	font-size:$font-small;
 	text-transform: uppercase;
 	font-family: $font-bold;
 }
@@ -811,7 +828,7 @@ uniquement lorsque le paragraphe n'est pas vide */
 	width:75px;
 	background:url('../img/icons/joie_hover.svg') center $color-joie no-repeat;
 	background-size:50%;
-	top: 70px;
+	//top: 70px;
 	left: 176px;
 	z-index: 5;
 }
@@ -820,24 +837,20 @@ uniquement lorsque le paragraphe n'est pas vide */
 	width:  100%;
 }
 
+/* ADD */
+
+
 
 /* FRONT */
 
-.front header{
-	position: absolute;
-	width: 298px;
-}
 
-.front header img{
-	width:20px;
-}
-
+.add .full-img,
 .front .full-img{
 	background: url("http://www.noemiediaz.fr/kazoku/upload/img1.jpg") no-repeat 0 0 transparent;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 100%;
+	height: 567px;
 	width: 100%;
 	overflow: hidden;
 	position: absolute;
@@ -915,10 +928,11 @@ uniquement lorsque le paragraphe n'est pas vide */
 	letter-spacing: 6px;
 }
 
+.add .overlay,
 .front .overlay {
 	background: url("../img/overlay-emotion.jpg") no-repeat 0 0 transparent;
 	background-size: cover;
-	height: 100%;
+	height: 567px;
 	width: 100%;
 	position: absolute;
 	z-index: -1;

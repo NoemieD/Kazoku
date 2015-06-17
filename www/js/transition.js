@@ -88,7 +88,7 @@ $(function() {
     {
       $('.second-choice').css("transform",'translateY(500px)');
       $('.second-choice').css("opacity",'0');
-      $('.btn-next').addClass("hide");
+      $('.memories .btn-next').addClass("hide");
       $('.bar').css("width", $('.bar').width()+barWidth +"px");
       goToPage($currentPage.next());
     }

@@ -38,6 +38,30 @@ function play() {
 }
 
 
+//FILE MUSIC
+// initialisation des variables
+/*
+var fileInput  = document.getElementById("input-file");
+var button     = document.getElementById('musique');
+var the_return = document.getElementById("file-return");
+
+// action lorsque le label est cliqué
+if(button){
+	button.addEventListener( "click", function( event ) {
+		console.log("clique");
+		fileInput.focus();
+		return false;
+	});
+}
+
+// affiche un retour visuel dès que input:file change
+	fileInput.addEventListener( "change", function( event ) {
+		console.log(change);
+	the_return.innerHTML = this.value;  
+});
+*/
+
+
 //DISCOVER SOUVENIR
 
 $('.container-blur').on('click', function(e){
@@ -52,9 +76,9 @@ $('.gesture').on('click', function(e){
 
 
 /*Animation front*/
-	var showMore = document.getElementById('show-more');
-	var main = document.getElementsByTagName('main')[0];
-	var y = window.pageYOffset;
+var showMore = document.getElementById('show-more');
+var main = document.getElementsByTagName('main')[0];
+var y = window.pageYOffset;
 
 if(showMore)
 	showMore.addEventListener('click', scrollToY, false);
@@ -78,16 +102,16 @@ var lessOpacity=0;
 if(obj){
 	obj.addEventListener('touchmove', function(event) {
   // If there's exactly one finger inside this element
-  	var touch = event.targetTouches[0];
-  	contrast = contrast-0.1;
-  	blur = blur + 0.05;
+  var touch = event.targetTouches[0];
+  contrast = contrast-0.1;
+  blur = blur + 0.05;
 
-  	if(blur <= 10){
-  		txt.style.WebkitFilter = 'blur('+contrast+'px)';
-  		img.style.WebkitFilter = 'blur('+blur+'px)';
+  if(blur <= 10){
+  	txt.style.WebkitFilter = 'blur('+contrast+'px)';
+  	img.style.WebkitFilter = 'blur('+blur+'px)';
     //txt.style.opacity = blur;   
-	}
-	else{
+}
+else{
 			//txt.style.filter = 'blur('+blur+'px)';
 			txt.style.opacity = moreOpacity;
 			audio.style.opacity = moreOpacity;
@@ -99,7 +123,7 @@ if(obj){
 			lessOpacity = lessOpacity + 0.01;
 		}
 
-	
+
 	}, false);
 }
 
