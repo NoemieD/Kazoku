@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+ var nbImage = 1;
+
  var app = {
 
     // Application Constructor
@@ -42,16 +45,34 @@
         var edit = document.getElementById('edit');
         edit.style.display = "block";
 
+        var addPicture =document.getElementById("add-picture");
+        addPicture.style.display = "block";
+
+        var imageURI = imageURI;
+        this.uploadPhoto(imageURI);
+    },
+
+    onSuccessAddPicture : function(imageURI){
+
+        var imageSrc = imageURI;
+        var picturePreview = document.getElementById('picture-preview-snd');
+        var pictureEndPreview = document.getElementById('picture-end-preview-snd');
+        var containerPicturePreview = document.getElementsByClassName('picture-preview')[0];
+
+        pictureEndPreview.src = imageSrc;
+
+        picturePreview.style.backgroundImage = 'url("'+ imageSrc +'")';
+       
+        containerPicturePreview.style.width = "50%";
+        containerPicturePreview.style.float = "left";
+
+
         var imageURI = imageURI;
         this.uploadPhoto(imageURI);
     },
 
     onFail : function(message) {
         alert('Failed because: ' + message);
-    },
-
-    onSuccessMusic : function(imageURI){
-        alert("sucess");
     },
 
     onTakePhoto: function(){
@@ -61,58 +82,22 @@
         });
     },
 
-    onTakeMusic: function(){
-        console.log("onTakeMusic");
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, this.gotFS.bind(this), this.fail)
-    },
-
-    gotFS: function(fileSystem) {
-        console.log(fileSystem);
-        console.log("gotFS");
-        fileSystem.root.getFile("", null, this.gotFileEntry, this.fail);
-    },
-
-    gotFileEntry: function (fileEntry) {
-        console.log("fileEntry");
-        fileEntry.file(this.gotFile.bind(this), this.fail.bind(this));
-    },
-
-    gotFile: function (file){
-        console.log("gotFile");
-        readDataUrl(file);
-        readAsText(file);
-    },
-
-    readDataUrl: function(file){
-        console.log("readAsDataURL");
-        var reader = new FileReader();
-        reader.onloadend = function(evt) {
-            console.log("Read as data URL");
-            console.log(evt.target.result);
-        };
-        reader.readAsDataURL(file);
-    },
-
-    readAsText: function(file){
-        console.log("readAsText");
-        var reader = new FileReader();
-        reader.onloadend = function(evt) {
-            console.log("Read as text");
-            console.log(evt.target.result);
-        };
-        reader.readAsText(file);
+    onTakeAddPicture: function(){
+        navigator.camera.getPicture(this.onSuccessAddPicture.bind(this), this.onFail, { 
+            quality: 50,
+            destinationType: Camera.DestinationType.FILE_URI
+        });
     },
 
 
     uploadPhoto: function(imageURI) {
-        var cpt = 1;
 
         var options = new FileUploadOptions();
         options.fileKey="file";
 
        // options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-       options.fileName="img1.jpg";
-       cpt=cpt+1;
+       options.fileName="img"+nbImage+".jpg";
+       nbImage=nbImage+1;
 
 
        var ft = new FileTransfer();
@@ -129,7 +114,7 @@
 
    fail:function(){
     alert("fail");
-   },
+},
 
 
 
@@ -141,15 +126,15 @@
         document.addEventListener('deviceready', this.onDeviceReady, false);
         var illustration =  document.getElementById("illustration");
         var edit =  document.getElementById("edit");
-        var musique =document.getElementById("musique");
+        var addPicture =document.getElementById("add-picture");
         //document.getElementById("illustration").addEventListener("click", this.onTakePhoto.bind(this), false);
         //document.getElementById("edit").addEventListener("click", this.onTakePhoto.bind(this), false);
         if(illustration)
             illustration.addEventListener("click", this.onTakePhoto.bind(this), false);
         if(edit)
             edit.addEventListener("click", this.onTakePhoto.bind(this), false);
-        if(musique)
-            musique.addEventListener("click", this.onTakeMusic.bind(this), false);
+        if(addPicture)
+            addPicture.addEventListener("click", this.onTakeAddPicture.bind(this), false);
 
     },
     // deviceready Event Handler

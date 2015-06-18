@@ -17,30 +17,39 @@
 <body>
 
 	<main class="param">
-			<form class="" role="form">
+		<form class="" role="form">
 
-				<section class="page">
-					<h1 class="">Choix</h1>
-					<p class="dark-color">De la fréquence de consultation<br>des souvenirs</p>
-					<p class="light-color no-margin">- ce choix n'est pas irréversible -</p>
+			<section class="page">
+				<h1 class="">Choix</h1>
+				<p class="dark-color">De la fréquence de consultation<br>des souvenirs</p>
+				<p class="light-color no-margin">- ce choix n'est pas irréversible -</p>
+				<div class="circle-container">
+				<input type="text" class="frequence"
+				value="0;3"
+				data-min="0"
+				data-max="10"
+				data-unit=""
+				>
+				<p class="unite">/ semaine
+				</div>
 
-					<div><p>/semaine<p></div>
 
-					<a href="#" id="" class="btn btn-next">ok</a>
-				</section>
+				<a href="#" id="" class="btn btn-next">ok</a>
+			</section>
 
-				<section class="page">
-					<h1>Choix</h1>
-					<p class="dark-color">Du filtre d'arrivée des<br>souvenirs</p>
-					<p class="light-color no-margin">- ce choix n'est pas irréversible -</p>
-					<p class="btn">Date</p>
-					<p class="btn">Sphère de vie</p>
-					<p class="btn">Emotion</p>
-					
-					<a href="front.html" class="btn btn-next">ok</a>
-				</section>
+			<section class="page">
+				<h1>Choix</h1>
+				<div class="container">
+				<p class="dark-color">Du filtre d'arrivée des<br>souvenirs</p>
+				<p class="light-color no-margin">- ce choix n'est pas irréversible -</p>
+				<p class="btn-circle btn-choice date">Date</p>
+				<p class="btn-circle btn-choice sphere">Sphère de vie</p>
+				<p class="btn-circle btn-choice emotion">Emotion</p>
+				</div>
+				<a href="front.html" class="btn">ok</a>
+			</section>
 
-			</form>
+		</form>
 	</main>
 
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 

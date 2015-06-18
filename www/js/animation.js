@@ -78,7 +78,11 @@ function animateEmotion(){
 function animatePreview(){
 
 	setInterval(function () {
-		document.getElementById("preview-picture").style.top ="66px";
+		document.getElementById("preview-picture1").style.top ="66px";
+	}, 1300);
+
+		setInterval(function () {
+		document.getElementById("preview-picture2").style.top ="-5px";
 	}, 1300);
 
 	setInterval(function () {
