@@ -1,0 +1,17 @@
+/*Pres*/
+main.intro{
+	background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
+	position:fixed;
+	background-size: cover;
+}
+
+.intro{
+	.btn-diamond{
+		margin-top: 250px;
+		margin-bottom: 155px;
+		img{
+			padding-left: 7px;
+			padding-top: 1px;
+		}
+	}
+}

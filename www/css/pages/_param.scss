@@ -1,0 +1,128 @@
+$lcn-circle-range-select-width: 150px !default;
+$lcn-circle-range-select-border-width: 0.8em !default;
+$lcn-circle-range-select-border-color: $color-light-opacity7;
+$lcn-circle-range-select-border-selected-range-color: $color-dark;
+$lcn-circle-range-select-handle-width: 2em !default;
+$lcn-circle-range-select-handle-color: $color-dark;
+
+/*Parametre*/
+
+.param {
+	.full-img{
+		background: url("../img/fond_front.jpg") no-repeat 0 0 transparent;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 574px;
+		width: 100%;
+		-webkit-filter:blur(5px);
+		filter:blur(5px);
+		z-index:-1;
+		width: 105%;
+		top: -2px;
+		left: -6px;
+		position: absolute;
+	}
+	.page{
+		top:40px;
+		
+		.circle-container{
+			width: 200px;
+			height: 200px;
+			margin:30px auto;
+			background-color: $color-light-opacity7;
+			border-radius: 50%;
+			position:relative;
+			color:$color-dark;
+			margin-top:78px;
+			margin-bottom:50px;
+			input{
+				opacity: 0;
+				&.circle-range-select {
+					display: none;
+				}
+			}
+			.unite{
+				position: absolute;
+				top: 47%;
+				left: 30%;
+				font-size: 18px;
+				color:$color-dark;
+			}
+			.circle-range-select-wrapper {
+				position: relative;
+				max-width: 100%;
+				width: $lcn-circle-range-select-width;
+				height: $lcn-circle-range-select-width;
+				margin: $lcn-circle-range-select-handle-width/2;
+				padding: $lcn-circle-range-select-handle-width/2 !important;
+				border-radius: 50%;
+				border: $lcn-circle-range-select-border-width solid $lcn-circle-range-select-border-color;
+				transform: translate3d(-25%,0,0);
+				cursor: default;
+				margin-left: 50px;
+				.handle {
+					position: absolute;
+					z-index: 2;
+					width: 0;
+					height: 0;
+					border: 0;
+					padding: 0;
+					cursor: pointer;
+					&:before {
+						content: '';
+						position: absolute;
+						z-index: 3;
+						top: -$lcn-circle-range-select-handle-width/2;
+						left: -1.5em;
+						height: $lcn-circle-range-select-handle-width;
+						width: $lcn-circle-range-select-handle-width;
+						border-radius: 50%;
+						background: $lcn-circle-range-select-handle-color;
+					}
+				}
+				.handle1:before{
+					opacity: 0;
+				}
+				.values .value1{
+					display: none;
+				}
+				.selected-range {
+					position: absolute;
+					z-index: 1;
+					color: $lcn-circle-range-select-border-selected-range-color;
+				}
+				.values {
+					pointer-events: none;
+					position: absolute;
+					z-index: 2;
+					top: 40%;
+					left: 0;
+					right: 0;
+					margin-top: -0.5em;
+					font-size: 0.85rem;
+					text-align: center;
+					color:$color-dark;
+					font-size: 45px;
+					font-family: $font-bold;
+				}
+			}
+		}
+
+		.btn-choice{
+			background-color:$color-light-opacity7;
+			font-family:$font-reader;
+			line-height: 100px;
+			text-transform: none;
+			left: 36%;
+			top:-50%;
+			letter-spacing: initial;
+			font-size: $font-normal;
+			line-height: 110px;
+			transition: all 1s ease;
+			&.active{
+				background-color: $color-bright;
+			}
+		}
+	}
+}

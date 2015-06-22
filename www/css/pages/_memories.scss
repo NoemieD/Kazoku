@@ -1,0 +1,145 @@
+/*Add Memories*/
+
+/*Global*/
+.add{
+	.full-img{
+		background: url("../img/back.png") no-repeat 0 0 transparent;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 567px;
+		width: 100%;
+		position: absolute;
+		z-index:-1;
+	}
+	header{
+		//width: 95%;
+		//left: 9px;
+		//z-index:2;
+		//height: 50px;
+		img{
+			width: 45%;
+		}
+		/*.left,
+		.right
+		{
+			width: 7%;
+			margin-top: -3px;
+			}*/
+		}
+		.center{
+			padding-top:200px;
+			p{
+				margin-bottom:30px;
+			}
+			.btn-diamond{
+				margin-top:0px!important;
+				img{
+					max-width: 80%;
+					padding-right:4px;
+				}
+			}
+		}
+	}
+	.more{
+		z-index: -1;
+		position: fixed;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		img{
+			width: 30%;
+		}
+	}
+	.old{
+		.full-img{
+			background: url("http://www.noemiediaz.fr/kazoku/images/photo.jpg") no-repeat center transparent;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 567px;
+			width: 100%;
+			overflow: hidden;
+			position: absolute;
+		}
+		.btn-diamond{
+			margin: 240px 25px;
+			img{
+				width: 70%;
+				&#eye{
+					padding-right: 5px;
+					padding-top: 2px;
+				}
+				&#send{
+					padding-top: 9px;
+				}
+			}
+		}
+		.overlay{
+			background: url("../img/old_remember.png") no-repeat 0 0 transparent;
+			background-size: cover;
+			position: absolute;
+			height: 567px;
+			width: 100%;
+		}
+	}
+
+
+/*effet sur la logo */
+	.midnightHeader.default{
+		text-align:center;
+		color:#412f3f;
+		#setting{
+			background: url("../img/setting_dark.svg") no-repeat center transparent;
+			background-size:contain;
+			height: 21px;
+			width: 21px;
+		}
+		#help{
+			background: url("../img/help_dark.svg") no-repeat center transparent;
+			background-size:contain;
+			height: 21px;
+			width: 21px;
+		}
+		#logo{
+			background: url("../img/logo_texte_dark.svg") no-repeat center transparent;
+			background-size:contain;
+			height: 16px;
+			width: 133px;
+			display: block;
+			margin: auto;
+			padding-top: 6px;
+		}
+	}
+
+	.midnightHeader.white{
+		color:#f7f2ea;
+		text-align:center;
+		#setting{
+			background: url("../img/setting_light.svg") no-repeat center transparent;
+			background-size:contain;
+			height: 21px;
+			width: 21px;
+		}
+		#help{
+			background: url("../img/help_light.svg") no-repeat center transparent;
+			background-size:contain;
+			height: 21px;
+			width: 21px;
+		}
+		#logo{
+			background: url("../img/logo_texte_light.svg") no-repeat center transparent;
+			background-size:contain;
+			height: 16px;
+			width: 133px;
+			display: block;
+			margin: auto;
+			padding-top: 6px;
+		}
+	}
+
+	section#midnight {
+		width: 88%;
+		margin: 0 auto;
+		top:25px;
+	}

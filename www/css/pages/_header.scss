@@ -1,0 +1,21 @@
+/*HEADER */
+
+header{
+	position: fixed;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	z-index:500;
+	margin-top:13px;
+	img{
+		width: 5%;
+	}
+	p{
+		margin-top: 0;
+	}
+	.btn-prev img{
+		width: 28%;
+		margin-left: 16px;
+	}
+
+}

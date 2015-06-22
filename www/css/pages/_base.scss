@@ -1,0 +1,384 @@
+/*Bases*/
+
+@font-face {
+	font-family: 'code_boldregular';
+	src: url('./fonts/code_bold-webfont.eot');
+	src: url('./fonts/code_bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/code_bold-webfont.woff2') format('woff2'),
+	url('./fonts/code_bold-webfont.woff') format('woff'),
+	url('./fonts/code_bold-webfont.ttf') format('truetype'),
+	url('./fonts/code_bold-webfont.svg#code_boldregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'code_lightregular';
+	src: url('./fonts/code_light-webfont.eot');
+	src: url('./fonts/code_light-webfont.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/code_light-webfont.woff2') format('woff2'),
+	url('./fonts/code_light-webfont.woff') format('woff'),
+	url('./fonts/code_light-webfont.ttf') format('truetype'),
+	url('./fonts/code_light-webfont.svg#code_lightregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Cambria-Italic';
+	src: url('./fonts/Cambria-Italic.eot');
+	src: url('./fonts/Cambria-Italic.eot') format('embedded-opentype'),
+	url('./fonts/Cambria-Italic.woff') format('woff'),
+	url('./fonts/Cambria-Italic.ttf') format('truetype'),
+	url('./fonts/Cambria-Italic.svg#code_lightregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-reader: 'Cambria-Italic';
+$font-light: 'code_lightregular';
+$font-bold: 'code_boldregular';
+
+$font-big:18px;
+$font-normal:16px;
+$font-small:12px;
+
+
+$color-dark: #412f3f;
+$color-light: #f7f2ea;
+$color-light-opacity:rgba(247,242,234,0.5);
+$color-light-opacity7:rgba(247,242,234,0.7);
+$color-bright:#ff6852;
+$color-bright-opacity:rgba(255,104,82,0.5);
+
+$color-joie:#f57e4a;
+$color-colere:#973342;
+$color-doute:#796178;
+$color-triste:#3a384f;
+$color-surprise:#f5be49;
+
+
+/* GLOBAL */
+
+html {
+	-webkit-tap-highlight-color: rgba(255, 104, 82, 0);
+}
+
+body{
+	font-family:$font-reader;
+	font-size:$font-normal;
+	color:$color-light;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.center {
+	text-align:center;
+	margin: 0 auto;
+	display: block;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.dark-color{
+	color:$color-dark;
+}
+
+.bright-color{
+	color:$color-bright;
+}
+
+.light-color{
+	color:$color-light;
+}
+
+.relative {
+	position:relative;
+}
+
+.absolute{
+	position:absolute;
+}
+
+.inline-flex{
+	display:inline-flex;
+}
+
+.uppercase{
+	text-transform:uppercase;
+	letter-spacing: 3px;
+}
+
+
+.light-font{
+	font-family:$font-light;
+	letter-spacing:7px;
+}
+
+.bold-font{
+	font-family:$font-bold;
+	letter-spacing:7px;
+}
+
+.small-font{
+	font-size:$font-small;
+	margin-bottom: -13px;
+	margin-top: 20px;
+
+}
+
+.padding-right{
+	padding-right:6px;
+}
+
+.hide{
+	display:none !important;
+}
+
+section{
+	text-align:center;
+}
+
+a{
+	text-decoration: none;
+	position: relative;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+li{
+	list-style-type: none;
+}
+ul, ol{
+	padding: 0;
+}
+
+h1{
+	font-size:$font-big;
+	text-align:center;
+	font-family:$font-bold;
+	letter-spacing:7px;
+	text-transform:uppercase;
+	margin-bottom:-14px;
+	color:$color-dark;
+}
+
+h2{
+	font-size:$font-normal;
+	color:$color-dark;
+	text-align:center;
+	margin:0px;
+}
+
+img.half{
+	width:50%;
+}
+
+button{
+	border:none;
+}
+
+.no-margin{
+	margin:0 auto;
+}
+
+.active{
+	transition: background-color 0.8s ease;
+}
+
+
+input{
+	background-color: $color-light-opacity;
+	width: 217px;
+	height: 39px;
+	border-radius: 2px;
+	margin: 4px auto;
+	font-family: $font-bold;
+	color: $color-dark;
+	text-align: left;
+	border: 1px solid $color-light;
+	display: block;
+	margin-bottom: 140px;
+	padding: 10px;
+	box-sizing:border-box;
+	text-align:center;
+	letter-spacing:7px;
+	&:focus,&:active,&:visited {
+		border: none;
+		border: 1px solid $color-bright;
+	}
+}
+
+
+.container{
+	max-width: 560px;
+	margin:auto;
+	box-sizing: border-box;
+	padding-left:5%;
+	padding-right:5%;
+	//padding-top:200px;
+	min-height:359px;
+}
+
+.wrapper{
+	height:567px;
+}
+
+main{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+.logo{
+	img{
+		width: 40%;
+		padding-left: 6px;
+	}
+}
+
+
+.btn{
+	background-color:$color-light;
+	font-family:$font-bold;
+	text-transform:uppercase;
+	letter-spacing:6px;
+	border-radius:2px;
+	color:$color-dark;
+	font-size:$font-big;
+	width:160px;
+	height: 25px;
+	text-align: center;
+	padding-left: 11px;
+	padding-top: 11px;
+	padding-bottom:2px;
+	margin: 10px auto;
+	display: block;
+	box-shadow: 0px 5px 0px 0px $color-light-opacity;
+}
+
+.page {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height:415px;
+	text-align: center;
+	transition: all 0.5s ease;
+	transform: translate3d(100%, 0, 0);
+}
+
+.btn-actif:active,
+.btn-next:active
+{
+	background-color: $color-bright;
+	box-shadow: none;
+	margin-top: 12px;
+}
+
+
+.btn-close {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 50px;
+	font-size: 0;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+}
+
+.btn-close a{
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 16px;
+	right: 16px;
+	height: 2px;
+}
+
+.btn-close a:before, .btn-close a:after {
+	position: absolute;
+	display: block;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #dcc9b9;
+	content: "";
+
+}
+
+.btn-close>a:before{
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.btn-close>a:after{
+	bottom: 0;
+	transform: rotate(-45deg);
+}
+
+.btn-circle{
+	background-color: $color-light-opacity7;
+	display: inline-block;
+	border-radius: 50%;
+	height: 110px;
+	width: 110px;
+	text-align: center;
+	color: $color-dark;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 2px;
+	position: relative;
+	overflow: hidden;
+	font-family:$font-bold;
+	position:absolute;
+
+}
+
+.btn-diamond{
+	background-color:$color-light;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	border-radius:0px;
+	transform: rotate(45deg);
+	box-shadow: 7px 7px 0px 0px $color-light-opacity;
+	text-align: center;
+	line-height: 50px;
+	display:inline-block;
+	margin-top: 105px;
+	margin-bottom: 155px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.btn-diamond img{
+	width:50%;
+	vertical-align:middle;
+	transform: rotate(-45deg);
+}

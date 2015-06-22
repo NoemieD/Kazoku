@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Kazoku</title>
+
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<script src="js/vendor/modernizr.min.js"></script>
+</head>
+<body>
+
+	<main class="param">
+		<div class="full-img"></div>
+		<section class="page">
+			<h1 class="">Choix</h1>
+			<p class="dark-color">De la fréquence de consultation<br>des souvenirs</p>
+			
+			<div class="circle-container">
+				<input type="text" class="frequence"
+				value="0;3"
+				data-min="0"
+				data-max="10"
+				data-unit=""
+				>
+				<p class="unite align-center dark-color">/ semaine</p>
+			</div>
+
+			<p class="light-color no-margin">- ce choix n'est pas irréversible -</p>
+			<a href="#" id="btn-next-choice" class="btn btn-next">ok</a>
+		</section>
+
+		<section class="page">
+			<h1>Choix</h1>
+			<div class="container">
+				<p class="dark-color">Du filtre d'arrivée des<br>souvenirs</p>
+				<p class="btn-circle btn-choice" id="date">Date</p>
+				<p class="btn-circle btn-choice" id="sphere">Sphères<br>de vie</p>
+				<p class="btn-circle btn-choice" id="emotion">Émotions</p>
+			</div>
+			<p class="light-color no-margin">- ce choix n'est pas irréversible -</p>
+			<a href="#" class="btn btn-next" id="btn-next-emotion">ok</a>
+		</section>
+
+		<section class="page">
+			<h1>Léa</h1>
+			<p class="dark-color">À quelle émotion <br>voulez-vous que le souvenir <br>d'aujourd'hui corresponde ?<br></p>
+			<div class="clearfix btn-emotion-container">
+				<span class="btn-circle btn-emotion emotion" id="joie"></span>
+				<span class="btn-circle btn-emotion emotion" id="colere"></span>
+				<span class="btn-circle btn-emotion emotion" id="triste"></span>
+				<span class="btn-circle btn-emotion emotion" id="surprise"></span>
+				<span class="btn-circle btn-emotion emotion" id="doute"></span>
+			</div>
+			<a href="discover.html" class="btn btn-actif">ok</a>
+		</section>
+
+	</main>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="cordova_plugin.js"></script>
+	<script type="text/javascript" src="js/vendor/underscore-min.js"></script>
+	<script type="text/javascript" src="js/vendor/backbone-min.js"></script>
+	<script type="text/javascript" src="js/vendor/plugin.js"></script>
+	<script type="text/javascript" src="js/transition.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/animation.js"></script>
+
+</body>
+</html>

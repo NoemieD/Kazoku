@@ -17,7 +17,7 @@
  * under the License.
  */
 
- var nbImage = 1;
+ var nameImage = "photo.jpg";
 
  var app = {
 
@@ -62,10 +62,10 @@
         pictureEndPreview.src = imageSrc;
 
         picturePreview.style.backgroundImage = 'url("'+ imageSrc +'")';
-       
+
         containerPicturePreview.style.width = "50%";
         containerPicturePreview.style.float = "left";
-
+        nameImage="ajout.jpg"
 
         var imageURI = imageURI;
         this.uploadPhoto(imageURI);
@@ -78,6 +78,8 @@
     onTakePhoto: function(){
         navigator.camera.getPicture(this.onSuccess.bind(this), this.onFail, { 
             quality: 50,
+            targetWidth: 1080,
+            targetHeight: 1920,
             destinationType: Camera.DestinationType.FILE_URI
         });
     },
@@ -85,6 +87,8 @@
     onTakeAddPicture: function(){
         navigator.camera.getPicture(this.onSuccessAddPicture.bind(this), this.onFail, { 
             quality: 50,
+            targetWidth: 1080,
+            targetHeight: 1920,
             destinationType: Camera.DestinationType.FILE_URI
         });
     },
@@ -96,17 +100,14 @@
         options.fileKey="file";
 
        // options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
-       options.fileName="img"+nbImage+".jpg";
-       nbImage=nbImage+1;
-
-
+       options.fileName=nameImage;
+       
        var ft = new FileTransfer();
        ft.upload(imageURI, "http://noemiediaz.fr/kazoku/upload.php",
         function(){
-            alert("win");
+            console.log("win")
         }, 
         function(){
-
             alert("fail");
         }, options);
 

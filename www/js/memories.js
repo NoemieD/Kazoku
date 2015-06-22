@@ -6,7 +6,7 @@ var Memorie = Backbone.Model.extend({
 		narration:"N/A",
 		musique:"Sugar Sugar",
 		date:"N/A",
-		sphere:"Amour",
+		sphere:"",
 		emotion:"",
 	}
 });

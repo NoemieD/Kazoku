@@ -1,0 +1,323 @@
+
+$font-reader: 'Cambria-Italic';
+$font-light: 'code_lightregular';
+$font-bold: 'code_boldregular';
+
+$font-big:18px;
+$font-normal:16px;
+$font-small:12px;
+
+
+$color-dark: #412f3f;
+$color-light: #f7f2ea;
+$color-light-opacity:rgba(247,242,234,0.5);
+$color-light-opacity7:rgba(247,242,234,0.7);
+$color-bright:#ff6852;
+$color-bright-opacity:rgba(255,104,82,0.5);
+
+$color-joie:#f57e4a;
+$color-colere:#973342;
+$color-doute:#796178;
+$color-triste:#3a384f;
+
+/*Discover*/
+
+/*Global*/
+.front{
+	header{
+		width: 95%;
+		left: 9px;
+		z-index:2;
+		img{
+			width: 45%;
+		}
+		.left,
+		.right
+		{
+			width: 7%;
+			margin-top: -3px;
+		}
+	}
+	.full-img{
+		background: url("http://www.noemiediaz.fr/kazoku/images/photo.jpg") no-repeat center transparent;
+		background-size: cover;
+		height: 567px;
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		z-index: -2;
+	}
+	#img-discover2{
+		background: url("http://www.noemiediaz.fr/kazoku/images/ajout.jpg") no-repeat center transparent;
+		background-size: cover;
+		z-index: -3;
+	}
+	.blur {
+		background-image: url("http://www.noemiediaz.fr/kazoku/images/photo.jpg");
+		background-position: center;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		border-radius:50%;
+		z-index:-2;
+		transform: translateZ(0);
+	}
+
+	.old {
+		height: 567px;
+		overflow: hidden;
+		img{
+			width:100%;
+			transform: translate3d(0,-50px,0);
+		}
+	}
+
+	
+	.btn-diamond{
+		margin: 25px;
+		.send{
+			img{
+				padding-top: 8px;
+			}
+		}
+	}
+	.discover{
+		.btn-diamond{
+			&.play{
+				margin: 45px auto auto;
+			}
+			&pause{
+				margin: 45px auto auto;
+			}
+		}
+	}
+	.text{
+		position: absolute;
+		text-align: center;
+		height: 250px;
+		margin-top: 0px;
+		padding-top: 0px;
+		width: 250px;
+		transition: opacity 0.5s ease;
+		transform:translateZ(0);
+		.uppercase{
+			font-size:$font-big;
+			letter-spacing: 6px;
+		}
+	}
+	.content-text.text-souvenir{
+		height: auto;
+		margin-top: 60px;
+		text-align: left;
+		margin-bottom: 90px;
+		position:relative;
+		transform:translateZ(0);
+		.date{
+			font-size: 30px;
+			margin-bottom: 45px;
+			text-align: right;
+			letter-spacing: 12px;
+		}
+	}
+	#text-souvenir{
+		-webkit-filter: blur(8px);
+		opacity:0;
+		filter: blur(8px);
+	}
+	#img-discover{
+		-webkit-filter: blur(4px);
+		filter: blur(4px);
+		opacity:1;
+		width: 105%;
+		left: -5px;
+		height: 105%;
+		top: -5px;
+		transition: filter 1s ease-out;
+		
+	}
+	.more{
+		z-index: 0;
+	}
+
+}
+
+/*Partir flouté*/
+.content-text,
+.container-blur{
+	position: relative;
+	height: 250px;
+	width: 250px;
+	margin: auto;
+	margin-top: 159px;
+	margin-bottom: 158px;
+	transform:translateZ(0);
+	img{
+		margin-bottom: 10px;
+	}
+}
+
+/*Partie avant la découverte*/
+
+#pre-discover .container-blur{
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 1px solid $color-light;
+	z-index:2;
+	transition: width 2s ease, height 2s ease, transform 2s ease;
+	.txt-blur 
+	{ 
+		img{
+			margin-top: 27px;
+		}
+		.uppercase
+		{
+			margin-top: 50px;
+		}
+	}
+}
+
+/* Partie découverte */
+
+#discover .txt-blur .uppercase{
+	margin-top: 0;
+}
+
+
+.discover .overlay{
+	background-image:none;
+	background-color:#f08951;;
+	opacity: 0.25;
+	transition: transform 2s ease;
+	background-position: center;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate3d(-50%,-50%,0) scale(0);
+}
+
+/*Partie sons*/
+.front .pause:after {
+	content: '';
+	background-color: $color-dark;
+	width: 50px;
+	height: 1px;
+	display: block;
+	position: absolute;
+	top: 48%;
+	left: 4px;
+	transform: rotate(90deg);
+	opacity: 0.5;
+}
+
+.front .play:after {
+	content: '';
+	background: none;
+}
+
+.timeline{
+	width: 250px;
+	height: 5px;
+	margin: 46px auto 29px auto;
+	border-radius: 15px;
+	background:$color-dark;
+	position: relative;
+}
+.playhead{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background:$color-bright;
+	position:absolute;
+	top:-3px;
+}
+
+p.margin-bottom{
+	margin-bottom:120px;
+}
+
+.fin-souvenir{
+	width: 283px;
+	height: 440px;
+	background-color: $color-light-opacity;
+	margin: auto;
+	padding: 26px;
+	box-sizing: border-box;
+	border-radius:5px;
+	border:1px $color-light solid;
+	position:absolute;
+	top :0;
+	left: 50%;
+	transform: translate3d(-50%,0,0);
+}
+
+
+#fin-souvenir{
+	opacity:0;
+}
+
+
+#pre-discover{
+	transition: opacity 3s ease;
+	transition: opacity 3s ease;
+}
+
+.front section#discover {
+	position: absolute;
+	display: none; 
+	height: 567px;
+	top: 0;
+	width: 100%;
+	left: 0;
+	overflow: hidden;
+	opacity: 1;
+	transition: opacity 0.5s ease;
+	transition: filter 0.5s ease;
+}
+
+
+#sms img{
+	width: 60%;
+	margin-top: 5px;
+}
+
+
+
+.front .discover .overlay{
+	background-image:none;
+	background-color:$color-bright;
+	opacity: 0.3;
+	transition: transform 2s ease;
+	background-position: center;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate3d(-50%,-50%,0) scale(0);
+}
+
+
+.front .discover .txt-blur .uppercase{
+	margin-top: 0;
+}
+
+.front .overlay
+{
+	background: url("../img/old_remember.png") no-repeat 0 0 transparent;
+	background-size: cover;
+	position: absolute;
+	height: 567px;
+	width: 100%;
+}
+
+.front .discover .btn-diamond.play,
+.front .discover .btn-diamond.pause,
+{
+	margin: 45px auto auto;
+}

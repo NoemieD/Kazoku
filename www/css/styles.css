@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* FONT */
+/*Bases*/
 @import url(carousel.css);
 @font-face {
   font-family: 'code_boldregular';
@@ -22,18 +22,20 @@
   font-weight: normal;
   font-style: normal;
 }
-/* VARIABLE */
-/*fonts*/
-/*colors*/
 /* GLOBAL */
-.left {
-  float: left;
+/* line 64, pages/_base.scss */
+html {
+  -webkit-tap-highlight-color: rgba(255, 104, 82, 0);
 }
 
-.right {
-  float: right;
+/* line 68, pages/_base.scss */
+body {
+  font-family: "Cambria-Italic";
+  font-size: 16px;
+  color: #f7f2ea;
 }
 
+/* line 74, pages/_base.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -42,103 +44,136 @@
   /* 2 */
 }
 
+/* line 80, pages/_base.scss */
 .clearfix:after {
   clear: both;
 }
 
+/* line 84, pages/_base.scss */
 .center {
   text-align: center;
   margin: 0 auto;
   display: block;
 }
 
+/* line 90, pages/_base.scss */
+.left {
+  float: left;
+}
+
+/* line 94, pages/_base.scss */
+.right {
+  float: right;
+}
+
+/* line 98, pages/_base.scss */
 .align-center {
   text-align: center;
 }
 
-.align-right {
-  text-align: right;
-}
-
+/* line 102, pages/_base.scss */
 .dark-color {
   color: #412f3f;
 }
 
+/* line 106, pages/_base.scss */
 .bright-color {
   color: #ff6852;
 }
 
+/* line 110, pages/_base.scss */
 .light-color {
   color: #f7f2ea;
 }
 
+/* line 114, pages/_base.scss */
 .relative {
   position: relative;
 }
 
+/* line 118, pages/_base.scss */
 .absolute {
   position: absolute;
 }
 
+/* line 122, pages/_base.scss */
 .inline-flex {
   display: inline-flex;
 }
 
+/* line 126, pages/_base.scss */
 .uppercase {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-.italic {
-  font-style: italic;
-}
-
+/* line 132, pages/_base.scss */
 .light-font {
   font-family: "code_lightregular";
   letter-spacing: 7px;
 }
 
+/* line 137, pages/_base.scss */
 .bold-font {
   font-family: "code_boldregular";
   letter-spacing: 7px;
 }
 
+/* line 142, pages/_base.scss */
+.small-font {
+  font-size: 12px;
+  margin-bottom: -13px;
+  margin-top: 20px;
+}
+
+/* line 149, pages/_base.scss */
+.padding-right {
+  padding-right: 6px;
+}
+
+/* line 153, pages/_base.scss */
 .hide {
   display: none !important;
 }
 
+/* line 157, pages/_base.scss */
 section {
   text-align: center;
 }
 
+/* line 161, pages/_base.scss */
 a {
   text-decoration: none;
   position: relative;
 }
 
+/* line 166, pages/_base.scss */
 a:hover {
   text-decoration: none;
 }
 
+/* line 170, pages/_base.scss */
 li {
   list-style-type: none;
 }
 
+/* line 173, pages/_base.scss */
 ul, ol {
   padding: 0;
 }
 
+/* line 177, pages/_base.scss */
 h1 {
   font-size: 18px;
   text-align: center;
   font-family: "code_boldregular";
-  letter-spacing: 6px;
+  letter-spacing: 7px;
   text-transform: uppercase;
   margin-bottom: -14px;
   color: #412f3f;
-  margin-left: 6px;
 }
 
+/* line 187, pages/_base.scss */
 h2 {
   font-size: 16px;
   color: #412f3f;
@@ -146,37 +181,27 @@ h2 {
   margin: 0px;
 }
 
+/* line 194, pages/_base.scss */
 img.half {
   width: 50%;
 }
 
-body {
-  font-family: "Cambria-Italic";
-  font-size: 16px;
-  color: #f7f2ea;
-}
-
+/* line 198, pages/_base.scss */
 button {
   border: none;
 }
 
+/* line 202, pages/_base.scss */
 .no-margin {
   margin: 0 auto;
 }
 
-textarea {
-  overflow: auto;
-  border: none;
-  width: 100%;
-  height: 190px;
-  margin-bottom: 10px;
-  background-color: rgba(247, 242, 234, 0.5);
-  color: #000;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: "Cambria-Italic";
+/* line 206, pages/_base.scss */
+.active {
+  transition: background-color 0.8s ease;
 }
 
+/* line 211, pages/_base.scss */
 input {
   background-color: rgba(247, 242, 234, 0.5);
   width: 217px;
@@ -188,106 +213,47 @@ input {
   text-align: left;
   border: 1px solid #f7f2ea;
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 140px;
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
   letter-spacing: 7px;
 }
-input:focus {
+/* line 227, pages/_base.scss */
+input:focus, input:active, input:visited {
   border: none;
   border: 1px solid #ff6852;
 }
 
+/* line 234, pages/_base.scss */
 .container {
   max-width: 560px;
   margin: auto;
   box-sizing: border-box;
   padding-left: 5%;
   padding-right: 5%;
-  min-height: 400px;
+  min-height: 359px;
 }
 
+/* line 244, pages/_base.scss */
 .wrapper {
   height: 567px;
 }
 
-.container-small {
-  max-width: 380px;
-  margin: auto;
-  text-align: center;
-  box-sizing: border-box;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
+/* line 248, pages/_base.scss */
 main {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-main.param {
-  background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
-  position: fixed;
-  background-size: cover;
-}
-
-main.discover {
-  height: 567px;
-  overflow: hidden;
-}
-
-main.intro {
-  background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
-  position: fixed;
-  background-size: cover;
-}
-
-main.memories {
-  position: fixed;
-  background-size: cover;
-}
-
+/* line 255, pages/_base.scss */
 .logo img {
   width: 40%;
   padding-left: 6px;
 }
 
-.tutoriel .logo img {
-  width: 25%;
-  padding-left: 6px;
-}
-
-.memories .full-img {
-  background: url("../img/back.png") no-repeat 0 0 transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 567px;
-  width: 100%;
-  position: absolute;
-}
-
-.progress-bar {
-  background-color: #f7f2ea;
-  height: 6px;
-  width: 80%;
-  margin: auto;
-  border-radius: 6px;
-  position: relative;
-  overflow: hidden;
-  margin-top: 60px;
-}
-.progress-bar .bar {
-  background-color: #412f3f;
-  height: 6px;
-  width: 12.5%;
-  border-radius: 6px;
-  position: absolute;
-  transition: width 0.5s ease;
-}
-
+/* line 262, pages/_base.scss */
 .btn {
   background-color: #f7f2ea;
   font-family: "code_boldregular";
@@ -307,24 +273,7 @@ main.memories {
   box-shadow: 0px 5px 0px 0px rgba(247, 242, 234, 0.5);
 }
 
-.param .btn {
-  font-size: 16px;
-  margin: 30px auto;
-  width: 215px;
-}
-
-.btn-next:active {
-  background-color: #ff6852;
-  box-shadow: none;
-  margin-top: 25px;
-}
-
-.memories .btn-next,
-.btn#add {
-  position: absolute;
-  left: 25%;
-}
-
+/* line 281, pages/_base.scss */
 .page {
   position: absolute;
   right: 0;
@@ -336,203 +285,15 @@ main.memories {
   transform: translate3d(100%, 0, 0);
 }
 
-.page.go-next {
-  transform: translate3d(-100%, 0, 0);
+/* line 292, pages/_base.scss */
+.btn-actif:active,
+.btn-next:active {
+  background-color: #ff6852;
+  box-shadow: none;
+  margin-top: 12px;
 }
 
-.page.is-visible {
-  transform: translate3d(0, 0, 0);
-}
-
-/*HEADER */
-header {
-  position: fixed;
-  width: 100%;
-  padding: 15px;
-  box-sizing: border-box;
-  z-index: 500;
-  margin-top: 13px;
-}
-header img {
-  width: 5%;
-}
-header p {
-  margin-top: 0;
-}
-header .btn-prev img {
-  width: 50%;
-}
-
-.add header {
-  width: 95%;
-  left: 9px;
-  z-index: 2;
-}
-.add header img {
-  width: 45%;
-}
-.add header .left,
-.add header .right {
-  width: 7%;
-  margin-top: -3px;
-}
-
-.add .center {
-  padding-top: 200px;
-}
-.add .center p {
-  margin-bottom: 30px;
-}
-.add .center .btn-diamond {
-  margin-top: 0px !important;
-}
-.add .center .btn-diamond img {
-  max-width: 80%;
-  padding-right: 4px;
-}
-.add .more {
-  z-index: 2;
-}
-.add .more p {
-  margin-bottom: 0px;
-}
-
-.btn-diamond.send img {
-  padding-top: 8px;
-}
-
-.memories .btn-diamond {
-  margin-bottom: 0;
-}
-
-#add-picture {
-  margin-top: 64px;
-  margin-bottom: 23px;
-}
-
-/* TUTORIEL PAGE */
-.tutoriel {
-  margin: auto;
-}
-.tutoriel header {
-  height: 80px;
-}
-.tutoriel div.item {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.4);
-  border: 1px solid white;
-  box-sizing: border-box;
-  padding: 20px;
-  width: 230px;
-  height: 312px;
-  margin: auto;
-  border-radius: 2px;
-}
-.tutoriel div.item .uppercase {
-  letter-spacing: 6px;
-  font-size: 18px;
-  margin: 5px 0;
-}
-.tutoriel div.item .uppercase.margin {
-  margin-top: 22px;
-}
-.tutoriel div.item img {
-  width: 60%;
-  margin: 6px auto;
-}
-.tutoriel div.item.item1 .margin {
-  margin: 22px auto;
-  margin-top: 24px;
-  margin-bottom: 6px;
-}
-.tutoriel div.item.item2 .margin {
-  margin: 0;
-}
-.tutoriel div.item.item2 img {
-  margin: 18px auto;
-}
-.tutoriel div.item.item3 .margin {
-  margin-top: 0;
-}
-
-.tutoriel .full-img {
-  background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 567px;
-  width: 100%;
-  position: absolute;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  z-index: -1;
-  padding: 5px;
-  top: -2px;
-  left: -2px;
-}
-
-.add .full-img {
-  background: url("../img/back.png") no-repeat 0 0 transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 567px;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-}
-
-.add .old .full-img {
-  background: url("http://www.noemiediaz.fr/kazoku/upload/img1.jpg") no-repeat 0 0 transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 567px;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-}
-
-.add .old .btn-diamond {
-  margin: 240px 25px;
-}
-.add .old .btn-diamond img {
-  width: 70%;
-}
-
-.add .old .overlay {
-  background: url("../img/old_remember.png") no-repeat 0 0 transparent;
-  background-size: cover;
-  position: absolute;
-  height: 567px;
-  width: 100%;
-}
-
-.owl-carousel {
-  margin-top: 129px;
-}
-
-.owl-dots {
-  text-align: center;
-}
-.owl-dots .owl-dot {
-  height: 10px;
-  background-color: #f7f2ea;
-  width: 10px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 15px 7px;
-}
-.owl-dots .owl-dot.active {
-  background-color: #412f3f;
-}
-
-/*FORM*/
-form {
-  position: relative;
-  height: 85%;
-}
-
+/* line 301, pages/_base.scss */
 .btn-close {
   display: block;
   position: relative;
@@ -546,6 +307,7 @@ form {
   border: none;
 }
 
+/* line 314, pages/_base.scss */
 .btn-close a {
   display: block;
   position: absolute;
@@ -555,110 +317,36 @@ form {
   height: 2px;
 }
 
+/* line 323, pages/_base.scss */
 .btn-close a:before, .btn-close a:after {
   position: absolute;
   display: block;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #f7f2ea;
+  background-color: #dcc9b9;
   content: "";
 }
 
+/* line 334, pages/_base.scss */
 .btn-close > a:before {
   top: 0;
   transform: rotate(45deg);
 }
 
+/* line 339, pages/_base.scss */
 .btn-close > a:after {
   bottom: 0;
   transform: rotate(-45deg);
 }
 
-form p {
-  color: #ff6852;
-  font-family: "Cambria-Italic";
-  margin-bottom: 35px;
-}
-
-.btn-icon {
-  width: 87px;
-  height: 60px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 6px 6px 6px 6px;
-  line-height: 60px;
-  position: relative;
-}
-
-.btn-icon img {
-  width: 50%;
-  vertical-align: middle;
-}
-
-.btn-icon#photo img,
-.btn-icon#video img {
-  width: 70%;
-}
-
-.btn-icon.active {
-  background-color: #ff6852;
-  box-shadow: 0px 5px 0px 0px rgba(255, 104, 82, 0.5);
-}
-
-.btn-icon.active:after {
-  content: '';
-  position: absolute;
-  overflow: hidden;
-  bottom: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 14px solid #ff6852;
-}
-
-.btn-icon-snd {
-  background-color: rgba(247, 242, 234, 0.7);
-  width: 215px;
-  height: 45px;
-  margin: 18px auto;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 3px;
-  font-family: "code_boldregular";
-  line-height: 48px;
-  color: #412f3f;
-  text-align: left;
-  text-indent: 30px;
-}
-
-label.btn-icon-snd {
-  display: block;
-}
-
-.btn-icon-snd img {
-  width: 35px;
-  vertical-align: middle;
-  margin-right: 10px;
-  margin-top: -3px;
-}
-
-.btn-emotion-container,
-.btn-sphere-container {
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-}
-
+/* line 344, pages/_base.scss */
 .btn-circle {
-  background-color: #f7f2ea;
+  background-color: rgba(247, 242, 234, 0.7);
   display: inline-block;
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 110px;
   text-align: center;
   color: #412f3f;
   text-transform: uppercase;
@@ -670,138 +358,7 @@ label.btn-icon-snd {
   position: absolute;
 }
 
-.btn-sphere {
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
-  opacity: 0;
-  transition: transform 2s ease, opacity 0.5s ease;
-}
-
-.btn-emotion {
-  transform: scale(0.1);
-  opacity: 0;
-  transition: transform 2s ease, opacity 0.5s ease;
-}
-
-.btn-choice.active,
-.btn-sphere.active {
-  background-color: #ff6852;
-}
-
-.btn-emotion img,
-.btn-sphere img {
-  width: 50%;
-  margin: 20px 0px 4px 0px;
-}
-
-.btn-sphere#familial img {
-  width: 39%;
-  margin: 16px 0px 2px 0px;
-}
-
-.btn-sphere#amour img {
-  width: 40%;
-  margin-top: 25px;
-}
-
-.btn-emotion#joie {
-  left: 50%;
-  top: 55%;
-  background: url("../img/icons/joie.svg") #f7f2ea no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#joie.active {
-  background: url("../img/icons/joie_hover.svg") #f57e4a no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#colere {
-  top: 0%;
-  left: 38%;
-  background: url("../img/icons/colere.svg") #f7f2ea no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#colere.active {
-  background: url("../img/icons/colere_hover.svg") #973342 no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#triste {
-  top: 24%;
-  left: 65%;
-  background: url("../img/icons/tristesse.svg") #f7f2ea no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#triste.active {
-  background: url("../img/icons/tristesse_hover.svg") #3a384f no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#surprise {
-  top: 44%;
-  left: 20%;
-  background: url("../img/icons/surprise.svg") #f7f2ea no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#surprise.active {
-  background: url("../img/icons/surprise_hover.svg") #f5be49 no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#doute {
-  top: 20%;
-  left: 13%;
-  background: url("../img/icons/doute.svg") #f7f2ea no-repeat center;
-  background-size: 50%;
-}
-
-.btn-emotion#doute.active {
-  background: url("../img/icons/doute_hover.svg") #796178 no-repeat center;
-  background-size: 50%;
-}
-
-.first-choice {
-  transition: all 0.5s ease-out;
-  transform: translateY(100px);
-}
-
-.second-choice {
-  transition: transform 0.2s ease;
-  transition: opacity 2s ease;
-  transform: translateY(500px);
-  opacity: 0;
-}
-
-#add-picture,
-#edit {
-  display: none;
-}
-
-.container-picture-preview {
-  display: block;
-  width: 100%;
-  height: 60%;
-  position: absolute;
-  overflow: hidden;
-}
-.container-picture-preview .picture-preview {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  display: block;
-  width: 100%;
-  margin: 0;
-}
-.container-picture-preview .picture-preview#picture-preview-snd {
-  width: 50%;
-  float: right;
-}
-
+/* line 362, pages/_base.scss */
 .btn-diamond {
   background-color: #f7f2ea;
   width: 50px;
@@ -813,69 +370,428 @@ label.btn-icon-snd {
   text-align: center;
   line-height: 50px;
   display: inline-block;
-  margin-top: 130px;
+  margin-top: 105px;
   margin-bottom: 155px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.front .btn-diamond {
-  margin: 25px;
-}
-
+/* line 380, pages/_base.scss */
 .btn-diamond img {
   width: 50%;
   vertical-align: middle;
   transform: rotate(-45deg);
 }
 
-.btn-share {
-  background-color: rgba(247, 242, 234, 0.7);
-  box-shadow: none;
-  border: 2px solid #f1e9e0;
-  height: 20px;
-  width: 20px;
+/*Discover*/
+/*Global*/
+/* line 27, pages/_discover.scss */
+.front header {
+  width: 95%;
+  left: 9px;
+  z-index: 2;
+}
+/* line 31, pages/_discover.scss */
+.front header img {
+  width: 45%;
+}
+/* line 34, pages/_discover.scss */
+.front header .left,
+.front header .right {
+  width: 7%;
+  margin-top: -3px;
+}
+/* line 41, pages/_discover.scss */
+.front .full-img {
+  background: url("http://www.noemiediaz.fr/kazoku/images/photo.jpg") no-repeat center transparent;
+  background-size: cover;
+  height: 567px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -2;
+}
+/* line 50, pages/_discover.scss */
+.front #img-discover2 {
+  background: url("http://www.noemiediaz.fr/kazoku/images/ajout.jpg") no-repeat center transparent;
+  background-size: cover;
+  z-index: -3;
+}
+/* line 55, pages/_discover.scss */
+.front .blur {
+  background-image: url("http://www.noemiediaz.fr/kazoku/images/photo.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  border-radius: 50%;
+  z-index: -2;
+  transform: translateZ(0);
+}
+/* line 69, pages/_discover.scss */
+.front .old {
+  height: 567px;
+  overflow: hidden;
+}
+/* line 72, pages/_discover.scss */
+.front .old img {
+  width: 100%;
+  transform: translate3d(0, -50px, 0);
+}
+/* line 79, pages/_discover.scss */
+.front .btn-diamond {
+  margin: 25px;
+}
+/* line 82, pages/_discover.scss */
+.front .btn-diamond .send img {
+  padding-top: 8px;
+}
+/* line 89, pages/_discover.scss */
+.front .discover .btn-diamond.play {
+  margin: 45px auto auto;
+}
+/* line 92, pages/_discover.scss */
+.front .discover .btn-diamondpause {
+  margin: 45px auto auto;
+}
+/* line 97, pages/_discover.scss */
+.front .text {
+  position: absolute;
   text-align: center;
-  font-size: 25px;
+  height: 250px;
+  margin-top: 0px;
+  padding-top: 0px;
+  width: 250px;
+  transition: opacity 0.5s ease;
+  transform: translateZ(0);
+}
+/* line 106, pages/_discover.scss */
+.front .text .uppercase {
+  font-size: 18px;
+  letter-spacing: 6px;
+}
+/* line 111, pages/_discover.scss */
+.front .content-text.text-souvenir {
+  height: auto;
+  margin-top: 60px;
+  text-align: left;
+  margin-bottom: 90px;
+  position: relative;
+  transform: translateZ(0);
+}
+/* line 118, pages/_discover.scss */
+.front .content-text.text-souvenir .date {
+  font-size: 30px;
+  margin-bottom: 45px;
+  text-align: right;
+  letter-spacing: 12px;
+}
+/* line 125, pages/_discover.scss */
+.front #text-souvenir {
+  -webkit-filter: blur(8px);
+  opacity: 0;
+  filter: blur(8px);
+}
+/* line 130, pages/_discover.scss */
+.front #img-discover {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+  opacity: 1;
+  width: 105%;
+  left: -5px;
+  height: 105%;
+  top: -5px;
+  transition: filter 1s ease-out;
+}
+/* line 141, pages/_discover.scss */
+.front .more {
+  z-index: 0;
+}
+
+/*Partir flouté*/
+/* line 148, pages/_discover.scss */
+.content-text,
+.container-blur {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  margin-top: 159px;
+  margin-bottom: 158px;
+  transform: translateZ(0);
+}
+/* line 157, pages/_discover.scss */
+.content-text img,
+.container-blur img {
+  margin-bottom: 10px;
+}
+
+/*Partie avant la découverte*/
+/* line 164, pages/_discover.scss */
+#pre-discover .container-blur {
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 1px solid #f7f2ea;
+  z-index: 2;
+  transition: width 2s ease, height 2s ease, transform 2s ease;
+}
+/* line 172, pages/_discover.scss */
+#pre-discover .container-blur .txt-blur img {
+  margin-top: 27px;
+}
+/* line 175, pages/_discover.scss */
+#pre-discover .container-blur .txt-blur .uppercase {
+  margin-top: 50px;
+}
+
+/* Partie découverte */
+/* line 184, pages/_discover.scss */
+#discover .txt-blur .uppercase {
+  margin-top: 0;
+}
+
+/* line 189, pages/_discover.scss */
+.discover .overlay {
+  background-image: none;
+  background-color: #f08951;
+  opacity: 0.25;
+  transition: transform 2s ease;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(0);
+}
+
+/*Partie sons*/
+/* line 204, pages/_discover.scss */
+.front .pause:after {
+  content: '';
+  background-color: #412f3f;
+  width: 50px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  top: 48%;
+  left: 4px;
+  transform: rotate(90deg);
+  opacity: 0.5;
+}
+
+/* line 217, pages/_discover.scss */
+.front .play:after {
+  content: '';
+  background: none;
+}
+
+/* line 222, pages/_discover.scss */
+.timeline {
+  width: 250px;
+  height: 5px;
+  margin: 46px auto 29px auto;
+  border-radius: 15px;
+  background: #412f3f;
   position: relative;
 }
 
-.btn-share:after {
-  content: '✕';
-  color: #ff6852;
-  vertical-align: middle;
+/* line 230, pages/_discover.scss */
+.playhead {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 1px;
+  background: #ff6852;
   position: absolute;
   top: -3px;
-  left: 6px;
-  transform: scale(0);
-  transition: transform 0.5s ease;
 }
 
-.btn-share.active:after {
-  transform: scale(1);
+/* line 240, pages/_discover.scss */
+p.margin-bottom {
+  margin-bottom: 120px;
 }
 
-.btn-choice {
-  background-color: rgba(247, 242, 234, 0.7);
+/* line 244, pages/_discover.scss */
+.fin-souvenir {
+  width: 283px;
+  height: 440px;
+  background-color: rgba(247, 242, 234, 0.5);
+  margin: auto;
+  padding: 26px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px #f7f2ea solid;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+/* line 260, pages/_discover.scss */
+#fin-souvenir {
+  opacity: 0;
+}
+
+/* line 265, pages/_discover.scss */
+#pre-discover {
+  transition: opacity 3s ease;
+  transition: opacity 3s ease;
+}
+
+/* line 270, pages/_discover.scss */
+.front section#discover {
+  position: absolute;
+  display: none;
+  height: 567px;
+  top: 0;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  transition: filter 0.5s ease;
+}
+
+/* line 284, pages/_discover.scss */
+#sms img {
+  width: 60%;
+  margin-top: 5px;
+}
+
+/* line 291, pages/_discover.scss */
+.front .discover .overlay {
+  background-image: none;
+  background-color: #ff6852;
+  opacity: 0.3;
+  transition: transform 2s ease;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(0);
+}
+
+/* line 306, pages/_discover.scss */
+.front .discover .txt-blur .uppercase {
+  margin-top: 0;
+}
+
+/* line 310, pages/_discover.scss */
+.front .overlay {
+  background: url("../img/old_remember.png") no-repeat 0 0 transparent;
+  background-size: cover;
+  position: absolute;
+  height: 567px;
+  width: 100%;
+}
+
+/* line 319, pages/_discover.scss */
+.front .discover .btn-diamond.play,
+.front .discover .btn-diamond.pause {
+  margin: 45px auto auto;
+}
+
+/*HEADER */
+/* line 3, pages/_header.scss */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 500;
+  margin-top: 13px;
+}
+/* line 10, pages/_header.scss */
+header img {
+  width: 5%;
+}
+/* line 13, pages/_header.scss */
+header p {
+  margin-top: 0;
+}
+/* line 16, pages/_header.scss */
+header .btn-prev img {
+  width: 28%;
+  margin-left: 16px;
+}
+
+/*Création d'un souvenir*/
+/*Global*/
+/* line 4, pages/_create.scss */
+main.memories {
+  position: fixed;
+  background-size: cover;
+}
+/* line 7, pages/_create.scss */
+main.memories .full-img {
+  background: url("../img/back.png") no-repeat 0 0 transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 567px;
+  width: 100%;
+  position: absolute;
+}
+/* line 16, pages/_create.scss */
+main.memories form {
+  position: relative;
+  height: 81%;
+}
+/* line 19, pages/_create.scss */
+main.memories form p.txt {
+  color: #ff6852;
   font-family: "Cambria-Italic";
-  line-height: 100px;
-  text-transform: none;
-  left: 36%;
-  letter-spacing: initial;
-  font-size: 16px;
+  margin-bottom: 20px;
 }
-.btn-choice.date {
-  top: 25%;
+/* line 23, pages/_create.scss */
+main.memories form p.txt.margin-bottom {
+  margin-bottom: 120px;
 }
-.btn-choice.sphere {
-  top: 37%;
-  left: 17%;
+/* line 28, pages/_create.scss */
+main.memories form .container-picture-preview {
+  display: block;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  overflow: hidden;
 }
-.btn-choice.emotion {
-  top: 49%;
+/* line 34, pages/_create.scss */
+main.memories form .container-picture-preview .picture-preview {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  display: block;
+  width: 100%;
+  margin: 0;
 }
-
-.input-file {
+/* line 42, pages/_create.scss */
+main.memories form .container-picture-preview .picture-preview#picture-preview-snd {
+  width: 50%;
+  float: right;
+}
+/* line 48, pages/_create.scss */
+main.memories form textarea {
+  overflow: auto;
+  border: none;
+  width: 100%;
+  height: 190px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(247, 242, 234, 0.5);
+  color: #412f3f;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Cambria-Italic";
+}
+/* line 61, pages/_create.scss */
+main.memories form .input-file {
   position: absolute;
   top: 0;
   left: 0;
@@ -884,218 +800,59 @@ label.btn-icon-snd {
   opacity: 0;
   cursor: pointer;
 }
-
-/* styles du retour visuel */
-.file-return {
-  margin: 0;
+/* line 69, pages/_create.scss */
+main.memories form #add-picture,
+main.memories form #edit {
+  display: none;
 }
-
-.file-return:not(:empty) {
-  margin: 1em 0;
+/* line 73, pages/_create.scss */
+main.memories form #edit img {
+  width: 66%;
 }
-
-/* on complète l'information d'un contenu textuel
-uniquement lorsque le paragraphe n'est pas vide */
-.file-return:not(:empty):before {
-  content: "Selected file: ";
-  font-style: normal;
-  font-weight: normal;
+/* line 76, pages/_create.scss */
+main.memories form #add-picture {
+  margin-top: 64px;
+  margin-bottom: 35px;
+  background-color: #ff6852;
+  box-shadow: 7px 7px 0px 0px rgba(255, 104, 82, 0.5);
 }
-
-.preview-container {
-  position: relative;
-  height: 322px;
+/* line 81, pages/_create.scss */
+main.memories form #add-picture img {
+  width: 50%;
+  padding-right: 3px;
 }
-
-.preview-container .preview {
-  border-radius: 50%;
-  display: block;
-  overflow: hidden;
-  margin: auto;
-  color: #412f3f;
+/* line 87, pages/_create.scss */
+main.memories .btn-diamond {
+  margin-bottom: 0;
+}
+/* line 91, pages/_create.scss */
+main.memories footer .progress-bar {
   background-color: #f7f2ea;
-  position: absolute;
-  box-sizing: border-box;
-  top: -350px;
-  transition: top 1s ease;
-}
-
-.preview#preview-picture1 {
-  height: 133px;
-  width: 133px;
-  left: 55px;
-  z-index: 6;
-}
-
-.preview#preview-picture2 {
-  height: 120px;
-  width: 120px;
-  left: 188px;
-  z-index: 5;
-}
-
-.preview.narration {
-  height: 116px;
-  width: 116px;
-  left: 135px;
-  padding: 6px 0;
-  text-align: left;
-  z-index: 5;
-}
-
-.preview.music {
-  height: 120px;
-  width: 120px;
-  line-height: 114px;
-  left: 201px;
-}
-
-.preview.date {
-  height: 87px;
-  width: 87px;
-  left: 43px;
-  line-height: 87px;
-  font-family: "code_boldregular";
-}
-
-.preview.sphere {
-  height: 100px;
-  width: 100px;
-  background: url("../img/icons/amour.svg") center 13px no-repeat #f7f2ea;
-  background-size: 50%;
-  left: 127px;
-  z-index: 5;
-  line-height: 140px;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-family: "code_boldregular";
-}
-
-.preview.emotion {
-  height: 75px;
-  width: 75px;
-  background: url("../img/icons/joie_hover.svg") center #f57e4a no-repeat;
-  background-size: 50%;
-  left: 176px;
-  z-index: 5;
-}
-
-.preview-container .preview img {
-  width: 100%;
-}
-
-/* ADD */
-.code {
-  padding-top: 105px;
-}
-.code .full-img {
-  background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 567px;
-  width: 100%;
-  position: absolute;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  z-index: -1;
-  padding: 5px;
-  top: -2px;
-  left: -2px;
-}
-.code .input-code {
-  margin-top: 25px;
-}
-.code .input-code p {
-  margin-bottom: 7px;
-}
-
-/* FRONT */
-.front .full-img {
-  background: url("http://www.noemiediaz.fr/kazoku/upload/img1.jpg") no-repeat 0 0 transparent;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 567px;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  z-index: -2;
-}
-
-.front .content-text,
-.front .container-blur {
-  position: relative;
-  height: 250px;
-  width: 250px;
+  height: 6px;
+  width: 80%;
   margin: auto;
-  margin-top: 159px;
-  margin-bottom: 158px;
-}
-
-.front .content-text.text-souvenir {
-  height: auto;
-  margin-top: 60px;
-  text-align: left;
-  margin-bottom: 40px;
+  border-radius: 6px;
   position: relative;
+  overflow: hidden;
+  margin-top: 75px;
 }
-
-.front #text-souvenir {
-  -webkit-filter: blur(8px);
-  opacity: 1;
-  filter: blur(8px);
-}
-
-.front #img-discover {
-  -webkit-filter: blur(0px);
-  filter: blur(0px);
-}
-
-.front .content-text.text-souvenir .date {
-  font-size: 30px;
-  margin-bottom: 45px;
-  text-align: right;
-  letter-spacing: 12px;
-}
-
-.front .blur {
-  background-image: url("http://www.noemiediaz.fr/kazoku/upload/img1.jpg");
-  background-position: center;
-  height: 100%;
-  background-size: 165%;
-  width: 100%;
+/* line 100, pages/_create.scss */
+main.memories footer .progress-bar .bar {
+  background-color: #412f3f;
+  height: 6px;
+  width: 12.5%;
+  border-radius: 6px;
   position: absolute;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-  z-index: -2;
+  transition: width 0.5s ease;
 }
 
-.front .text {
-  position: absolute;
-  text-align: center;
-  height: 250px;
-  padding-top: 45px;
-  width: 250px;
+/*audio */
+/* line 115, pages/_create.scss */
+.memories #audio {
+  opacity: 0;
 }
 
-.front .text .uppercase {
-  font-size: 18px;
-  letter-spacing: 6px;
-}
-
-.front .overlay {
-  background: url("../img/overlay-emotion.jpg") no-repeat 0 0 transparent;
-  background-size: cover;
-  height: 567px;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  opacity: 0.3;
-}
-
+/* line 119, pages/_create.scss */
 .pause,
 .play {
   background-color: #f7f2ea;
@@ -1110,19 +867,30 @@ uniquement lorsque le paragraphe n'est pas vide */
   box-shadow: 5px 5px 0px 0px rgba(247, 242, 234, 0.5);
   z-index: 1;
 }
+/* line 132, pages/_create.scss */
+.pause img,
+.play img {
+  vertical-align: middle;
+}
 
-.pause:after {
+/* line 138, pages/_create.scss */
+.memories #audio .btn-diamond {
+  margin-top: 40px;
+}
+/* line 142, pages/_create.scss */
+.memories #audio .pause:after {
   content: '';
   background-image: url("../img/icons/play.svg");
-  background-position: 16px center;
   background-repeat: no-repeat;
+  background-position: 20px 14px;
+  background-size: 36%;
   height: 50px;
   width: 50px;
   transform: rotate(-45deg);
   display: block;
 }
-
-.play:after {
+/* line 154, pages/_create.scss */
+.memories #audio .play:after {
   content: '';
   background-image: url("../img/icons/pause.svg");
   background-repeat: no-repeat;
@@ -1131,166 +899,634 @@ uniquement lorsque le paragraphe n'est pas vide */
   transform: rotate(-45deg);
   display: block;
   background-position: center;
-  background-size: 37%;
+  background-position: 19px center;
+  background-size: 23%;
 }
 
-.front .pause,
-.front .play {
-  width: 85px;
-  height: 67px;
-  line-height: 67px;
-  border-radius: 5px;
-  padding-left: 11px;
-  padding-top: 11px;
-  box-shadow: 0px 5px 0px 0px rgba(247, 242, 234, 0.5);
+/*page*/
+/* line 173, pages/_create.scss */
+.page.go-next {
+  transform: translate3d(-100%, 0, 0);
 }
-
-.memories #audio {
+/* line 176, pages/_create.scss */
+.page.is-visible {
+  transform: translate3d(0, 0, 0);
+}
+/* line 179, pages/_create.scss */
+.page .first-choice {
+  transition: all 0.5s ease-out;
+  transform: translate3d(0, 55px, 0);
+  margin-bottom: 11px;
+}
+/* line 184, pages/_create.scss */
+.page .second-choice {
+  transition: transform 0.2s ease;
+  transition: opacity 2s ease;
+  transform: translate3d(0, 500px, 0);
   opacity: 0;
 }
+/* line 191, pages/_create.scss */
+.page .btn-next,
+.page .btn#add {
+  position: absolute;
+  left: 25%;
+}
 
-.play img,
-.pause img {
+/*BTN*/
+/* line 199, pages/_create.scss */
+.btn-icon {
+  width: 87px;
+  height: 60px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 6px 6px 6px 6px;
+  line-height: 60px;
+  position: relative;
+  box-shadow: 0px 8px 0px 0px rgba(247, 242, 234, 0.5);
+}
+/* line 208, pages/_create.scss */
+.btn-icon img {
+  width: 44%;
   vertical-align: middle;
 }
-
-.front .pause:after {
+/* line 212, pages/_create.scss */
+.btn-icon#text img {
+  padding-top: 5px;
+}
+/* line 215, pages/_create.scss */
+.btn-icon#photo img {
+  width: 60%;
+}
+/* line 218, pages/_create.scss */
+.btn-icon#video img {
+  width: 70%;
+  padding-top: 5px;
+}
+/* line 222, pages/_create.scss */
+.btn-icon.active {
+  background-color: #ff6852;
+  box-shadow: 0px 5px 0px 0px rgba(255, 104, 82, 0.5);
+  transition: background-color 0.8s ease;
+}
+/* line 226, pages/_create.scss */
+.btn-icon.active:after {
   content: '';
-  background-color: black;
-  width: 75px;
-  height: 1px;
-  display: block;
   position: absolute;
-  top: 50%;
-  transform: rotate(-45deg);
+  overflow: hidden;
+  bottom: -14px;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 14px solid #ff6852;
 }
 
-.timeline {
-  width: 250px;
-  height: 5px;
-  margin: 30px auto;
-  border-radius: 15px;
-  background: #412f3f;
+/* line 243, pages/_create.scss */
+.btn-icon-snd {
+  background-color: rgba(247, 242, 234, 0.7);
+  width: 215px;
+  height: 45px;
+  margin: 18px auto;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-family: "code_boldregular";
+  line-height: 48px;
+  color: #412f3f;
+  text-align: left;
+  text-indent: 24px;
+  border-radius: 2px;
+}
+/* line 257, pages/_create.scss */
+.btn-icon-snd img {
+  width: 35px;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -3px;
+}
+
+/* line 265, pages/_create.scss */
+label.btn-icon-snd {
+  display: block;
+}
+
+/*Partie sphere*/
+/* line 270, pages/_create.scss */
+.btn-emotion-container,
+.btn-sphere-container {
+  height: 300px;
+  overflow: hidden;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.playhead {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-top: 1px;
-  background: #ff6852;
+/* line 279, pages/_create.scss */
+.btn-sphere {
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0) scale(0.1);
+  opacity: 0;
+  transition: transform 2s ease, opacity 0.5s ease, background-color 0.8s ease;
+}
+/* line 284, pages/_create.scss */
+.btn-sphere img {
+  width: 49%;
+  margin: 24px 0px 4px 0px;
+}
+/* line 288, pages/_create.scss */
+.btn-sphere.active {
+  background-color: #ff6852;
+}
+/* line 291, pages/_create.scss */
+.btn-sphere#familial img {
+  width: 35%;
+  margin: 21px 0px 2px 0px;
+}
+/* line 295, pages/_create.scss */
+.btn-sphere#historique img {
+  margin-top: 27px;
+  padding-right: 5px;
+}
+/* line 299, pages/_create.scss */
+.btn-sphere#amour img {
+  width: 40%;
+  margin-top: 25px;
+}
+
+/*Partie émotion*/
+/* line 306, pages/_create.scss */
+.btn-circle.btn-emotion {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(247, 242, 234, 0.7);
+  transform: scale(0.1);
+  opacity: 0;
+  transition: transform 2s ease, opacity 0.5s ease;
+}
+/* line 313, pages/_create.scss */
+.btn-circle.btn-emotion img {
+  width: 50%;
+  margin: 20px 0px 4px 0px;
+}
+
+/* line 320, pages/_create.scss */
+.btn-emotion#joie {
+  left: 36%;
+  top: 3%;
+  background: url("../img/icons/joie.svg") #f7f2ea no-repeat center;
+  background-size: 60%;
+}
+/* line 325, pages/_create.scss */
+.btn-emotion#joie.active {
+  background: url("../img/icons/joie_hover.svg") #f57e4a no-repeat center;
+  background-size: 60%;
+  transition: background-color 0.8s ease;
+}
+/* line 331, pages/_create.scss */
+.btn-emotion#colere {
+  top: 23%;
+  left: 51%;
+  background: url("../img/icons/colere.svg") #f7f2ea no-repeat center;
+  background-size: 60%;
+}
+/* line 336, pages/_create.scss */
+.btn-emotion#colere.active {
+  background: url("../img/icons/colere_hover.svg") #973342 no-repeat center;
+  background-size: 60%;
+  transition: background-color 0.8s ease;
+}
+/* line 342, pages/_create.scss */
+.btn-emotion#triste {
+  top: 66%;
+  left: 58%;
+  background: url("../img/icons/tristesse.svg") #f7f2ea no-repeat center;
+  background-size: 60%;
+}
+/* line 347, pages/_create.scss */
+.btn-emotion#triste.active {
+  background: url("../img/icons/tristesse_hover.svg") #3a384f no-repeat center;
+  background-size: 60%;
+  transition: background-color 0.8s ease;
+}
+/* line 353, pages/_create.scss */
+.btn-emotion#surprise {
+  top: 23%;
+  left: 14%;
+  background: url("../img/icons/surprise.svg") #f7f2ea no-repeat center;
+  background-size: 60%;
+}
+/* line 358, pages/_create.scss */
+.btn-emotion#surprise.active {
+  background: url("../img/icons/surprise_hover.svg") #f5be49 no-repeat center;
+  background-size: 60%;
+  transition: background-color 0.8s ease;
+}
+/* line 364, pages/_create.scss */
+.btn-emotion#doute {
+  top: 46%;
+  left: 25%;
+  background: url("../img/icons/doute.svg") #f7f2ea no-repeat center;
+  background-size: 70%;
+}
+/* line 369, pages/_create.scss */
+.btn-emotion#doute.active {
+  background: url("../img/icons/doute_hover.svg") #796178 no-repeat center;
+  background-size: 70%;
+  transition: background-color 0.8s ease;
+}
+
+/*Partie share*/
+/* line 378, pages/_create.scss */
+.container-share {
+  margin-top: 42px;
+  margin-bottom: 45px;
+}
+/* line 381, pages/_create.scss */
+.container-share .btn-share {
+  background-color: rgba(247, 242, 234, 0.7);
+  box-shadow: none;
+  border: 2px solid #f1e9e0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+/* line 392, pages/_create.scss */
+.container-share .btn-share:after {
+  content: '✕';
+  color: #ff6852;
+  vertical-align: middle;
   position: absolute;
   top: -3px;
+  left: 6px;
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+/* line 402, pages/_create.scss */
+.container-share .btn-share.active:after {
+  transform: scale(1);
+}
+/* line 408, pages/_create.scss */
+.container-share .ensemble {
+  margin-top: -8px;
+  margin-bottom: 5px;
+}
+/* line 412, pages/_create.scss */
+.container-share .distance {
+  margin-top: -17px;
 }
 
-.fin-souvenir {
-  width: 283px;
-  height: 440px;
-  background-color: rgba(247, 242, 234, 0.5);
+/*Fin Preview*/
+/* line 420, pages/_create.scss */
+.preview-container {
+  position: relative;
+  height: 308px;
+  margin-top: 34px;
+}
+/* line 424, pages/_create.scss */
+.preview-container .preview {
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
   margin: auto;
-  padding: 26px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px #f7f2ea solid;
+  color: #412f3f;
+  background-color: #f7f2ea;
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  box-sizing: border-box;
+  top: -350px;
+  transition: top 1s ease;
+}
+/* line 435, pages/_create.scss */
+.preview-container .preview img {
+  width: 100%;
+}
+/* line 438, pages/_create.scss */
+.preview-container .preview#preview-picture1 {
+  height: 100px;
+  width: 100px;
+  left: 55px;
+  z-index: 6;
+}
+/* line 444, pages/_create.scss */
+.preview-container .preview#preview-picture2 {
+  height: 100px;
+  width: 100px;
+  left: 188px;
+  z-index: 5;
+}
+/* line 450, pages/_create.scss */
+.preview-container .preview.narration {
+  height: 100px;
+  width: 100px;
+  left: 144px;
+  padding: 6px 0;
+  text-align: center;
+  z-index: 5;
+  font-size: 12px;
+}
+/* line 459, pages/_create.scss */
+.preview-container .preview.music {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  left: 201px;
+}
+/* line 465, pages/_create.scss */
+.preview-container .preview.date {
+  height: 80px;
+  width: 80px;
+  left: 43px;
+  line-height: 80px;
+  padding-left: 7px;
+  font-family: "code_boldregular";
+  letter-spacing: 7px;
+}
+/* line 474, pages/_create.scss */
+.preview-container .preview.sphere {
+  height: 80px;
+  width: 80px;
+  background: url("../img/icons/amour.svg") center no-repeat #f7f2ea;
+  background-size: 50%;
+  left: 127px;
+  z-index: 5;
+  line-height: 140px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "code_boldregular";
+  letter-spacing: 7px;
+}
+/* line 487, pages/_create.scss */
+.preview-container .preview.emotion {
+  height: 80px;
+  width: 80px;
+  background: url("../img/icons/joie_hover.svg") center #f57e4a no-repeat;
+  background-size: 50%;
+  left: 176px;
+  z-index: 5;
+  letter-spacing: 7px;
 }
 
-#fin-souvenir {
-  opacity: 0;
+/* Chrome, Safari, Opera */
+/*
+@-webkit-keyframes animatedAmitie {
+	0%{
+		transform: translate(-53%, -136%) scale(1);
+	}
+	20%{
+		transform: translate(-43%, -126%) scale(1);
+	}
+	40%{
+		transform: translate(-33%, -136%) scale(1);
+	}
+	60%{
+		transform: translate(-43%, -146%) scale(1);
+	}
+	80%{
+		transform: translate(-53%, -156%) scale(1);
+	}
+	100%{
+		transform: translate(-53%, -136%) scale(1);
+	}
+} */
+/* Standard syntax */
+/*
+@keyframes animatedAmitie {
+	0%{
+		transform: translate(-53%, -136%) scale(1);
+	}
+	20%{
+		transform: translate(-43%, -126%) scale(1);
+	}
+	40%{
+		transform: translate(-33%, -136%) scale(1);
+	}
+	60%{
+		transform: translate(-43%, -146%) scale(1);
+	}
+	80%{
+		transform: translate(-53%, -156%) scale(1);
+	}
+	100%{
+		transform: translate(-53%, -136%) scale(1);
+	}
+}*/
+/*Add Memories*/
+/*Global*/
+/* line 5, pages/_memories.scss */
+.add .full-img {
+  background: url("../img/back.png") no-repeat 0 0 transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 567px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+/* line 15, pages/_memories.scss */
+.add header {
+  /*.left,
+  .right
+  {
+  	width: 7%;
+  	margin-top: -3px;
+  	}*/
+}
+/* line 20, pages/_memories.scss */
+.add header img {
+  width: 45%;
+}
+/* line 30, pages/_memories.scss */
+.add .center {
+  padding-top: 200px;
+}
+/* line 32, pages/_memories.scss */
+.add .center p {
+  margin-bottom: 30px;
+}
+/* line 35, pages/_memories.scss */
+.add .center .btn-diamond {
+  margin-top: 0px !important;
+}
+/* line 37, pages/_memories.scss */
+.add .center .btn-diamond img {
+  max-width: 80%;
+  padding-right: 4px;
 }
 
+/* line 44, pages/_memories.scss */
 .more {
+  z-index: -1;
   position: fixed;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
 }
+/* line 50, pages/_memories.scss */
+.more img {
+  width: 30%;
+}
 
-.old img {
+/* line 55, pages/_memories.scss */
+.old .full-img {
+  background: url("http://www.noemiediaz.fr/kazoku/images/photo.jpg") no-repeat center transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 567px;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+/* line 65, pages/_memories.scss */
+.old .btn-diamond {
+  margin: 240px 25px;
+}
+/* line 67, pages/_memories.scss */
+.old .btn-diamond img {
+  width: 70%;
+}
+/* line 69, pages/_memories.scss */
+.old .btn-diamond img#eye {
+  padding-right: 5px;
+  padding-top: 2px;
+}
+/* line 73, pages/_memories.scss */
+.old .btn-diamond img#send {
+  padding-top: 9px;
+}
+/* line 78, pages/_memories.scss */
+.old .overlay {
+  background: url("../img/old_remember.png") no-repeat 0 0 transparent;
+  background-size: cover;
+  position: absolute;
+  height: 567px;
   width: 100%;
 }
 
-.jcs {
-  position: relative;
-  border-style: solid;
-  border-radius: 100%;
-  border-color: #f7f2ea;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-width: 8px;
-}
-
-.jcs-value {
-  position: absolute;
-  border-style: none;
-  border-radius: 100%;
+/*effet sur la logo */
+/* line 89, pages/_memories.scss */
+.midnightHeader.default {
   text-align: center;
-  pointer-events: none;
-  line-height: 4em;
+  color: #412f3f;
+}
+/* line 92, pages/_memories.scss */
+.midnightHeader.default #setting {
+  background: url("../img/setting_dark.svg") no-repeat center transparent;
+  background-size: contain;
+  height: 21px;
+  width: 21px;
+}
+/* line 98, pages/_memories.scss */
+.midnightHeader.default #help {
+  background: url("../img/help_dark.svg") no-repeat center transparent;
+  background-size: contain;
+  height: 21px;
+  width: 21px;
+}
+/* line 104, pages/_memories.scss */
+.midnightHeader.default #logo {
+  background: url("../img/logo_texte_dark.svg") no-repeat center transparent;
+  background-size: contain;
+  height: 16px;
+  width: 133px;
+  display: block;
+  margin: auto;
+  padding-top: 6px;
+}
+
+/* line 115, pages/_memories.scss */
+.midnightHeader.white {
   color: #f7f2ea;
-  outline: none;
+  text-align: center;
+}
+/* line 118, pages/_memories.scss */
+.midnightHeader.white #setting {
+  background: url("../img/setting_light.svg") no-repeat center transparent;
+  background-size: contain;
+  height: 21px;
+  width: 21px;
+}
+/* line 124, pages/_memories.scss */
+.midnightHeader.white #help {
+  background: url("../img/help_light.svg") no-repeat center transparent;
+  background-size: contain;
+  height: 21px;
+  width: 21px;
+}
+/* line 130, pages/_memories.scss */
+.midnightHeader.white #logo {
+  background: url("../img/logo_texte_light.svg") no-repeat center transparent;
+  background-size: contain;
+  height: 16px;
+  width: 133px;
+  display: block;
+  margin: auto;
+  padding-top: 6px;
 }
 
-.jcs-indicator {
-  width: 20px;
-  height: 20px;
+/* line 141, pages/_memories.scss */
+section#midnight {
+  width: 88%;
+  margin: 0 auto;
+  top: 25px;
+}
+
+/*Parametre*/
+/* line 11, pages/_param.scss */
+.param .full-img {
+  background: url("../img/fond_front.jpg") no-repeat 0 0 transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 574px;
+  width: 100%;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: -1;
+  width: 105%;
+  top: -2px;
+  left: -6px;
   position: absolute;
-  border-radius: 100%;
-  background-color: #412f3f;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  pointer-events: none;
 }
-
-.jcs-panel {
-  position: relative;
-  display: inline-block;
-  border-style: solid;
-  border-color: transparent;
-  cursor: pointer;
+/* line 26, pages/_param.scss */
+.param .page {
+  top: 40px;
 }
-
-.jcs-value img {
-  border-radius: 100%;
-  background: transparent;
-  width: inherit;
-  height: inherit;
-}
-
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.circle-container {
-  width: 150px;
+/* line 29, pages/_param.scss */
+.param .page .circle-container {
+  width: 200px;
+  height: 200px;
   margin: 30px auto;
+  background-color: rgba(247, 242, 234, 0.7);
+  border-radius: 50%;
   position: relative;
+  color: #412f3f;
+  margin-top: 78px;
+  margin-bottom: 50px;
 }
-.circle-container input {
+/* line 39, pages/_param.scss */
+.param .page .circle-container input {
   opacity: 0;
 }
-.circle-container .unite {
-  position: absolute;
-  top: 47%;
-  left: 17%;
-  font-size: 18px;
-  color: #f7f2ea;
-}
-
-input.circle-range-select {
+/* line 41, pages/_param.scss */
+.param .page .circle-container input.circle-range-select {
   display: none;
 }
-
-.circle-range-select-wrapper {
+/* line 45, pages/_param.scss */
+.param .page .circle-container .unite {
+  position: absolute;
+  top: 47%;
+  left: 30%;
+  font-size: 18px;
+  color: #412f3f;
+}
+/* line 52, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper {
   position: relative;
   max-width: 100%;
   width: 150px;
@@ -1299,10 +1535,12 @@ input.circle-range-select {
   padding: 1em !important;
   border-radius: 50%;
   border: 0.8em solid rgba(247, 242, 234, 0.7);
-  transform: translateX(-25%);
+  transform: translate3d(-25%, 0, 0);
   cursor: default;
+  margin-left: 50px;
 }
-.circle-range-select-wrapper .handle {
+/* line 64, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper .handle {
   position: absolute;
   z-index: 2;
   width: 0;
@@ -1311,7 +1549,8 @@ input.circle-range-select {
   padding: 0;
   cursor: pointer;
 }
-.circle-range-select-wrapper .handle:before {
+/* line 72, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper .handle:before {
   content: '';
   position: absolute;
   z-index: 3;
@@ -1322,12 +1561,22 @@ input.circle-range-select {
   border-radius: 50%;
   background: #412f3f;
 }
-.circle-range-select-wrapper .selected-range {
+/* line 84, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper .handle1:before {
+  opacity: 0;
+}
+/* line 87, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper .values .value1 {
+  display: none;
+}
+/* line 90, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper .selected-range {
   position: absolute;
   z-index: 1;
   color: #412f3f;
 }
-.circle-range-select-wrapper .values {
+/* line 95, pages/_param.scss */
+.param .page .circle-container .circle-range-select-wrapper .values {
   pointer-events: none;
   position: absolute;
   z-index: 2;
@@ -1337,23 +1586,193 @@ input.circle-range-select {
   margin-top: -0.5em;
   font-size: 0.85rem;
   text-align: center;
-  color: #f7f2ea;
+  color: #412f3f;
   font-size: 45px;
   font-family: "code_boldregular";
 }
-
-.handle1:before {
-  opacity: 0;
+/* line 112, pages/_param.scss */
+.param .page .btn-choice {
+  background-color: rgba(247, 242, 234, 0.7);
+  font-family: "Cambria-Italic";
+  line-height: 100px;
+  text-transform: none;
+  left: 36%;
+  top: -50%;
+  letter-spacing: initial;
+  font-size: 16px;
+  line-height: 110px;
+  transition: all 1s ease;
+}
+/* line 123, pages/_param.scss */
+.param .page .btn-choice.active {
+  background-color: #ff6852;
 }
 
-.values .value1 {
-  display: none;
+/*Pres*/
+/* line 2, pages/_pres.scss */
+main.intro {
+  background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
+  position: fixed;
+  background-size: cover;
 }
 
+/* line 9, pages/_pres.scss */
 .intro .btn-diamond {
   margin-top: 250px;
+  margin-bottom: 155px;
 }
+/* line 12, pages/_pres.scss */
 .intro .btn-diamond img {
   padding-left: 7px;
   padding-top: 1px;
+}
+
+/*Pres front*/
+/* line 2, pages/_pres_front.scss */
+main.intro.front {
+  background: url("../img/fond_front.jpg") no-repeat 0 0 transparent;
+  position: fixed;
+  background-size: cover;
+}
+
+/* TUTORIEL PAGE */
+/* line 2, pages/_tutoriel.scss */
+.code {
+  height: 567px;
+  overflow: hidden;
+}
+/* line 5, pages/_tutoriel.scss */
+.code section.code {
+  padding-top: 105px;
+}
+/* line 8, pages/_tutoriel.scss */
+.code .logo {
+  transition: all 1s ease;
+  margin: auto;
+}
+/* line 11, pages/_tutoriel.scss */
+.code .logo img {
+  transition: width 1s ease;
+}
+/* line 15, pages/_tutoriel.scss */
+.code .full-img {
+  background: url("../img/fond_back.jpg") no-repeat 0 0 transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 567px;
+  width: 105%;
+  height: 105%;
+  top: -2px;
+  left: -6px;
+  position: absolute;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: -1;
+}
+/* line 31, pages/_tutoriel.scss */
+.code #animated-tuto {
+  transition: opacity 3s ease;
+}
+/* line 34, pages/_tutoriel.scss */
+.code .input-code {
+  margin-top: 25px;
+  transition: all 3s ease;
+}
+/* line 37, pages/_tutoriel.scss */
+.code .input-code input {
+  margin-bottom: 45px;
+}
+/* line 40, pages/_tutoriel.scss */
+.code .input-code p {
+  margin-bottom: 7px;
+}
+/* line 44, pages/_tutoriel.scss */
+.code .tutoriel {
+  margin: auto;
+  transition: all 1.5s ease-in;
+  transform: translate3d(350px, -675px, 0px);
+}
+/* line 48, pages/_tutoriel.scss */
+.code .tutoriel div.item {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid white;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 230px;
+  height: 312px;
+  margin: auto;
+  border-radius: 2px;
+}
+/* line 58, pages/_tutoriel.scss */
+.code .tutoriel div.item .uppercase {
+  letter-spacing: 6px;
+  font-size: 18px;
+  margin: 5px 0;
+}
+/* line 62, pages/_tutoriel.scss */
+.code .tutoriel div.item .uppercase.margin {
+  margin-top: 22px;
+}
+/* line 66, pages/_tutoriel.scss */
+.code .tutoriel div.item img {
+  width: 60%;
+  margin: 6px auto;
+}
+/* line 71, pages/_tutoriel.scss */
+.code .tutoriel div.item.item1 .margin {
+  margin: 22px auto;
+  margin-top: 24px;
+  margin-bottom: 6px;
+}
+/* line 78, pages/_tutoriel.scss */
+.code .tutoriel div.item.item2 .margin {
+  margin: 0;
+}
+/* line 81, pages/_tutoriel.scss */
+.code .tutoriel div.item.item2 img {
+  margin: 18px auto;
+}
+/* line 86, pages/_tutoriel.scss */
+.code .tutoriel div.item.item3 .margin {
+  margin-top: 0;
+}
+/* line 92, pages/_tutoriel.scss */
+.code .tutoriel .owl-carousel {
+  margin-top: 129px;
+}
+/* line 94, pages/_tutoriel.scss */
+.code .tutoriel .owl-carousel .owl-dots {
+  text-align: center;
+}
+/* line 96, pages/_tutoriel.scss */
+.code .tutoriel .owl-carousel .owl-dots .owl-dot {
+  height: 10px;
+  background-color: #f7f2ea;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 15px 7px;
+}
+/* line 104, pages/_tutoriel.scss */
+.code .tutoriel .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #412f3f;
+}
+
+/*Tutoriel front */
+/* line 3, pages/_tutoriel_front.scss */
+.code.front .full-img {
+  background: url("../img/fond_front.jpg") no-repeat 0 0 transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 105%;
+  height: 105%;
+  top: -2px;
+  left: -6px;
+}
+/* line 14, pages/_tutoriel_front.scss */
+.code.front div.item img {
+  margin-top: -30px;
 }
